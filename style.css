@@ -8,6 +8,10 @@ body {
   font-family: sans-serif;
 }
 
+video {
+  width: 100%;
+}
+
 .intro {
   height: 100vh;
 }
