@@ -29,31 +29,3 @@
 .navbar .color-border .border-part:nth-child(4) { background: #1fbcff; }
 
 .navbar .color-border .border-part:nth-child(5) { background: #003e8e; }
-
-@font-face { font-family: "Stolzl Regular"; src: url("/asstes/fonts/Stolzl-Regular.ttf") format("ttf"); }
-
-@font-face { font-family: "Stolzl Medium"; src: url("/asstes/fonts/Stolzl-Medium.ttf") format("ttf"); }
-
-@font-face { font-family: "Stolzl Bold"; src: url("/asstes/fonts/Stolzl-Bold.ttf") format("ttf"); }
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body { font-family: "Stolzl Medium", "Helvetica", sans-serif; background: #000; }
-
-.grid-max { max-width: 1250px; width: 100%; }
-
-.layout { display: flex; align-items: center; }
-
-.hero { background: #000; overflow-x: hidden; }
-
-.hero h1 { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 80px; color: white; }
-
-section { height: 100vh; color: black; }
-
-section h1 { color: white; padding-top: 300px; text-align: center; font-size: 80px; }
-
-.button { color: #fff !important; opacity: 1 !important; border-radius: 14px; background: #1fbcff; transition: transform 0.3s ease-in-out !important; box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.28); }
-
-.button:hover { transform: scale(0.96); }
-
-.button.button-small { font-size: 20px; padding: 8px 24px; }
