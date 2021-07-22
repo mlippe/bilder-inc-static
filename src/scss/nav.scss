@@ -1,4 +1,4 @@
-@import "variables.scss";
+@import "_variables.scss";
 
 .navbar {
   position: fixed;
@@ -47,6 +47,10 @@
     .right {
       display: flex;
       align-items: center;
+
+      .button {
+        margin-right: 0 !important;
+      }
 
       .link {
         font-size: 18px;

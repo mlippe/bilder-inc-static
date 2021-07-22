@@ -1,0 +1,21 @@
+@font-face { font-family: "Stolzl Regular"; src: url("/asstes/fonts/Stolzl-Regular.ttf") format("ttf"); }
+
+@font-face { font-family: "Stolzl Medium"; src: url("/asstes/fonts/Stolzl-Medium.ttf") format("ttf"); }
+
+@font-face { font-family: "Stolzl Bold"; src: url("/asstes/fonts/Stolzl-Bold.ttf") format("ttf"); }
+
+section.offer { position: relative; padding: 0; margin: 200px 0 350px; }
+
+section.offer > img { position: absolute; top: -15%; left: 0; width: 50%; max-width: 700px; }
+
+section.offer .layout { padding: 42px 0 52px; background: #fff; }
+
+section.offer .layout .inner { display: flex; justify-content: flex-end; }
+
+section.offer .layout .inner .wrapper { max-width: 720px; }
+
+section.offer .layout .inner h2 { color: #181413; }
+
+section.offer .layout .inner h4 { color: #5f5f5f; }
+
+section.offer .layout .inner .button { margin: 44px auto 0; display: block; width: fit-content; }

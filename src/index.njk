@@ -44,9 +44,40 @@
         </div>
       </div>
       {{ floatingContent.el('left','assets/img/home/easy_import2.jpg', '360px', 'Easy importing','Add your photos in no time, doesn’t matter how you store them today...', '#', 'orange' ) }}
-      {{ floatingContent.el('right','assets/img/home/automatic_organization.jpg', '90px', 'Automatic
-Organization','BilderAi analyses your photos and organizes them in a timeline and collections by itself.', '#', '' ) }}
+      {{ floatingContent.el('right','assets/img/home/automatic_organization.jpg', '90px', 'Automatic Organization','BilderAi analyses your photos and organizes them in a timeline and collections by itself.', '#', '' ) }}
+      {{ floatingContent.el('left','assets/img/home/book.jpg', '220px', 'Familiar viewing experience','BilderBook album contains 10 beautiful OLED screens. Flip through memories like in the good old times.', '#', 'green' ) }}
+      {{ floatingContent.el('right','assets/img/home/projector.jpg', '125px', 'Effortless slideshows','BilderBeam is quick and easy to set up. It’s 3h battery life gets it through those popcorn nights.', '#', 'blue' ) }}
+      {{ floatingContent.el('left','assets/img/home/social.jpg', '110px', 'Social libraries','Share your favourite photos through BilderApps. Shared images will appear directly in others libraries.', '#', '' ) }}
+      {{ floatingContent.el('right','assets/img/home/backups.jpg', '90px', 'Effortless slideshows','BilderBox is equipped with two drives with a mirrored filesystem. They are also user exchangable. ', '#', 'orange' ) }}
+      {{ floatingContent.el('left','assets/img/home/wifi.jpg', '110px', 'Storage under your control','Your photos stay local in your BilderBox. Simply connect it to home WiFi to access your library anywhere.', '#', 'green' ) }}
+      <div class="gradient-end"></div>
     </section>
+    <section class="testimonials">
+      <div class="layout">
+        <div class="inner grid-max">
+          <h1>What our customers say:</h1>
+          <div class="testimonial-container">
+            <div class="testimonial-content">
+              <div class="testimonial">
+                <img class="quotation-mark" src="/assets/img/home/quotation.svg">
+                <div class="quote">BilderBox is the visual interface to my life and life-history. Easy to use, integrates the flood of
+                  images, endless use cases. Aesthetic in design. Very exciting!</div>
+                <div class="author">
+                  <div class="line"></div>
+                  <img src="/assets/img/home/testimonial1.jpg">
+                  <div class="text">
+                    <div class="name">Matthias Lippmann</div>
+                    <div class="profession">Graduate mechanical engineer</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="controls"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {% include "./template-parts/_offer-section.njk" %}
     {% include "./template-parts/_footer.njk" %}
     {% include "./template-parts/_animation-scripts.njk" %}
     <script src="js/home.js"></script>

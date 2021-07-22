@@ -1,0 +1,43 @@
+@import "_variables.scss";
+
+section.offer {
+  position: relative;
+  padding: 0;
+  margin: 200px 0 350px;
+
+  > img {
+    position: absolute;
+    top: -15%;
+    left: 0;
+    width: 50%;
+    max-width: 700px;
+  }
+
+  .layout {
+    padding: 42px 0 52px;
+    background: $white;
+
+    .inner {
+      display: flex;
+      justify-content: flex-end;
+
+      .wrapper {
+        max-width: 720px;
+      }
+
+      h2 {
+        color: $chocolate;
+      }
+
+      h4 {
+        color: $medium-grey;
+      }
+
+      .button {
+        margin: 44px auto 0;
+        display: block;
+        width: fit-content;
+      }
+    }
+  }
+}

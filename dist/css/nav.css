@@ -16,6 +16,8 @@
 
 .navbar .inner .left, .navbar .inner .right { display: flex; align-items: center; }
 
+.navbar .inner .left .button, .navbar .inner .right .button { margin-right: 0 !important; }
+
 .navbar .inner .left .link, .navbar .inner .right .link { font-size: 18px; margin: 0 50px; color: #c6c6c6; text-decoration: none; opacity: 0.95; transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out, opacity 0.3s ease-in-out; }
 
 .navbar .inner .left .link.active, .navbar .inner .right .link.active { color: #fff; opacity: 1; }
