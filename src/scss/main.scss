@@ -1,19 +1,21 @@
 @import "_variables.scss";
+@import "mixins";
 
 // fonts
+
 @font-face {
   font-family: "Stolzl Regular";
-  src: url("/asstes/fonts/Stolzl-Regular.ttf") format("ttf");
+  src: url("/asstes/fonts/Stolzl-Regular.woff") format("woff");
 }
 
 @font-face {
   font-family: "Stolzl Medium";
-  src: url("/asstes/fonts/Stolzl-Medium.ttf") format("ttf");
+  src: url("/asstes/fonts/Stolzl-Medium.woff") format("woff");
 }
 
 @font-face {
   font-family: "Stolzl Bold";
-  src: url("/asstes/fonts/Stolzl-Bold.ttf") format("ttf");
+  src: url("/asstes/fonts/Stolzl-Bold.woff") format("woff");
 }
 
 * {
@@ -23,7 +25,8 @@
 }
 
 body {
-  font-family: "Stolzl Medium", "Helvetica", sans-serif;
+  font-family: stolzl, "Stolzl Medium", "Helvetica", sans-serif;
+  font-weight: 500;
   background: $chocolate;
 }
 
@@ -52,15 +55,22 @@ h4,
 h5,
 p {
   color: $white;
-  font-family: "Stolzl Medium", "Helvetica", sans-serif;
+  font-family: stolzl, "Stolzl Medium", "Helvetica", sans-serif;
+  font-weight: 500;
+  font-style: normal;
   letter-spacing: -0.016em;
   margin: 0;
   padding: 0;
 }
 
 h1 {
-  font-size: 80px;
-  margin-bottom: 40px;
+  font-size: 50px;
+  margin-bottom: 30px;
+
+  @include tablet {
+    font-size: 80px;
+    margin-bottom: 40px;
+  }
 
   em {
     font-style: normal;
