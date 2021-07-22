@@ -1,0 +1,89 @@
+@import "variables.scss";
+
+.floating-content {
+  width: 100%;
+  max-width: 1800px;
+  margin: 200px auto;
+  position: relative;
+  display: flex;
+
+  .text-container {
+    position: absolute;
+    width: 100%;
+    max-width: 1250px;
+    display: flex;
+    overflow-x: hidden;
+
+    .inner {
+      display: flex;
+      flex-direction: column;
+      max-width: 510px;
+
+      h4 {
+        margin-bottom: 50px;
+      }
+
+      .button {
+        width: fit-content;
+      }
+    }
+  }
+
+  .image-container {
+    display: flex;
+
+    img {
+      width: 100%;
+      min-height: 1000px;
+      object-fit: cover;
+
+      filter: drop-shadow(0px 2px 50px rgba(0, 0, 0, 0.4));
+    }
+  }
+
+  &.left {
+    .text-container {
+      justify-content: flex-end;
+      right: 100px;
+      text-align: right;
+
+      .inner {
+        align-items: flex-end;
+      }
+    }
+
+    .image-container {
+      align-items: flex-start;
+
+      img {
+        margin-right: 200px;
+        width: calc(100% - 200px);
+        object-position: right;
+        border-radius: 8px 25px 25px 8px;
+      }
+    }
+  }
+
+  &.right {
+    .text-container {
+      justify-content: flex-start;
+      left: 100px;
+      text-align: left;
+
+      .inner {
+        align-items: flex-start;
+      }
+    }
+
+    .image-container {
+      align-items: flex-end;
+
+      img {
+        border-radius: 25px 8px 8px 25px;
+        margin-left: 200px;
+        width: calc(100% - 200px);
+        object-position: left;
+      }
+    }
+  }
+}

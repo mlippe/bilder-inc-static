@@ -1,0 +1,31 @@
+@font-face { font-family: "Stolzl Regular"; src: url("/asstes/fonts/Stolzl-Regular.ttf") format("ttf"); }
+
+@font-face { font-family: "Stolzl Medium"; src: url("/asstes/fonts/Stolzl-Medium.ttf") format("ttf"); }
+
+@font-face { font-family: "Stolzl Bold"; src: url("/asstes/fonts/Stolzl-Bold.ttf") format("ttf"); }
+
+.hero { background: #000; overflow-x: hidden; }
+
+.hero h1 { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 80px; color: white; }
+
+section.one-central-space { width: 100%; position: relative; text-align: center; }
+
+section.one-central-space .content { max-width: 1050px; z-index: 1; }
+
+section.one-central-space .content h1 em { color: #1fbcff; }
+
+section.one-central-space .content h3 { max-width: 840px; margin: 0 auto; }
+
+section.one-central-space > img { width: 100%; margin-top: -50px; }
+
+section.ecosystem { padding-top: 0; background: #25262b; }
+
+section.ecosystem .intro { width: 100%; position: relative; }
+
+section.ecosystem .intro > img { width: 100%; }
+
+section.ecosystem .intro .layout { margin-top: -100px; }
+
+section.ecosystem .intro .layout h1 em { color: #ffbb1c; }
+
+section.ecosystem .intro .layout h3 { max-width: 840px; }

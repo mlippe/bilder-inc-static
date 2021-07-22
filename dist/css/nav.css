@@ -4,13 +4,19 @@
 
 @font-face { font-family: "Stolzl Bold"; src: url("/asstes/fonts/Stolzl-Bold.ttf") format("ttf"); }
 
-.navbar { position: fixed; top: 0; left: 0; width: 100%; height: 60px; z-index: 9999; display: flex; flex-direction: column; justify-content: space-between; }
+.navbar { position: fixed; top: 0; left: 0; width: 100%; height: 70px; z-index: 9999; display: flex; flex-direction: column; justify-content: space-between !important; background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(30px); transition: transform 0.3s ease-in-out; }
 
-.navbar .inner { display: flex; justify-content: space-between; margin: 0 20px; }
+.navbar.out-of-view { transform: translate3d(0, -68px, 0); }
+
+.navbar.out-of-view:after { content: ""; position: absolute; bottom: -75px; left: 0; width: 100%; height: 75px; }
+
+.navbar.mouse-trigger:after { content: ""; position: absolute; bottom: -75px; left: 0; width: 100%; height: 75px; }
+
+.navbar .inner { display: flex; justify-content: space-between; margin: 14px 20px 0; }
 
 .navbar .inner .left, .navbar .inner .right { display: flex; align-items: center; }
 
-.navbar .inner .left .link, .navbar .inner .right .link { font-size: 18px; margin: 0 50px; color: #c6c6c6; text-decoration: none; opacity: 0.9; transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out, opacity 0.3s ease-in-out; }
+.navbar .inner .left .link, .navbar .inner .right .link { font-size: 18px; margin: 0 50px; color: #c6c6c6; text-decoration: none; opacity: 0.95; transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out, opacity 0.3s ease-in-out; }
 
 .navbar .inner .left .link.active, .navbar .inner .right .link.active { color: #fff; opacity: 1; }
 

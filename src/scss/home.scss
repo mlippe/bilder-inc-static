@@ -1,0 +1,70 @@
+@import "variables.scss";
+
+.hero {
+  background: #000;
+  overflow-x: hidden;
+
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    color: white;
+  }
+}
+
+section.one-central-space {
+  width: 100%;
+  position: relative;
+  text-align: center;
+
+  .content {
+    max-width: 1050px;
+    z-index: 1;
+
+    h1 {
+      em {
+        color: $lightblue;
+      }
+    }
+
+    h3 {
+      max-width: 840px;
+      margin: 0 auto;
+    }
+  }
+
+  > img {
+    width: 100%;
+    margin-top: -50px;
+  }
+}
+
+section.ecosystem {
+  padding-top: 0;
+  background: #25262b;
+
+  .intro {
+    width: 100%;
+    position: relative;
+
+    > img {
+      width: 100%;
+    }
+
+    .layout {
+      margin-top: -100px;
+
+      h1 {
+        em {
+          color: $orange;
+        }
+      }
+
+      h3 {
+        max-width: 840px;
+      }
+    }
+  }
+}

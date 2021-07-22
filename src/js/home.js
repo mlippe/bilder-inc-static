@@ -70,13 +70,13 @@ const updateImage = (index) => {
   img.src = currentFrame(index);
   drawToCanvas(img);
 
-  window.addEventListener("resize", function () {
-    setTimeout(() => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      drawToCanvas(img);
-    }, 500);
-  });
+  // window.addEventListener("resize", function () {
+  //   setTimeout(() => {
+  //     canvas.width = window.innerWidth;
+  //     canvas.height = window.innerHeight;
+  //     drawToCanvas(img);
+  //   }, 500);
+  // });
 };
 
 scene.on("update", (e) => {
@@ -87,7 +87,7 @@ scene.on("update", (e) => {
 function initAnimation() {
   animationInterval = setInterval(() => {
     delay += (progress - delay) * 0.05;
-    console.log("delay", delay);
+    //console.log("delay", delay);
 
     const frameIndex = Math.min(frameCount - 1, Math.ceil(delay * frameCount));
 
@@ -116,14 +116,14 @@ let animationRunObserver = new IntersectionObserver(callback, {
 
 animationRunObserver.observe(animationSection);
 
-window.scroll(0, 0);
-// scroll down a bit
-document.addEventListener("DOMContentLoaded", function (event) {
-  window.scrollTo;
-  setTimeout(() => {
-    scrollTo(document.body, 300, 500);
-  }, 200);
-});
+// window.scroll(0, 0);
+// // scroll down a bit
+// document.addEventListener("DOMContentLoaded", function (event) {
+//   window.scrollTo;
+//   setTimeout(() => {
+//     scrollTo(document.body, 300, 500);
+//   }, 200);
+// });
 
 function scrollTo(element, to, duration) {
   var start = element.scrollTop,
@@ -152,3 +152,18 @@ Math.easeInOutQuad = function (t, b, c, d) {
   t--;
   return (-c / 2) * (t * (t - 2) - 1) + b;
 };
+
+// TOGGLE PROBLEM CARDS
+
+const toggleButton = document.querySelector(".one-central-space .button");
+const target = document.querySelector(".one-central-space .hide-wrapper");
+
+toggleButton.addEventListener("click", function () {
+  TweenLite.fromTo(
+    target,
+    0.5,
+    { opacity: 0, y: 20, display: "none" },
+    { opacity: 1, y: 0, display: "block" }
+  );
+  toggleButton.style.display = "none";
+});

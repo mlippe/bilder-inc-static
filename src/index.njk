@@ -1,3 +1,5 @@
+{% import "./template-parts/_problem-cards.njk" as problemCards %}
+{% import "./template-parts/_floating-content.njk" as floatingContent %}
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
@@ -15,11 +17,35 @@
       {# <video preload="auto" muted src="/assets/vid/output.mp4"></video> #}
       <canvas id="start-sequence"></canvas>
     </div>
-    <section>
-      <h1>Mega Nice</h1>
+    <section class="one-central-space">
+      <div class="inner layout">
+        <div class="content grid-max">
+          <h1>
+            <em>One central space</em>
+            for personal memories</h1>
+          <h3>Organization. Consumation. Sharing. Backing up. All in one.</h3>
+        </div>
+      </div>
+      <img src="/assets/img/home/easy_import.jpg"/>
+      <div class="button button-large outline">Why is this so cool?</div>
+      <div class="hide-wrapper" style="display: none;">
+        {{ problemCards.problemCards('Bilder Inc. tackles 3 big problems of personal photography today') }}
+      </div>
     </section>
-    <section>
-      <h1>ODer?</h1>
+    <section class="ecosystem">
+      <div class="intro">
+        <img src="/assets/img/home/ecosystem.jpg"/>
+        <div class="layout">
+          <div class="grid-max">
+            <h1>Meet the<br><em>Bilder Ecosystem</em>
+            </h1>
+            <h3>Developed to give your memories the space they deserve. Discover how it works below.</h3>
+          </div>
+        </div>
+      </div>
+      {{ floatingContent.el('left','assets/img/home/easy_import2.jpg', '360px', 'Easy importing','Add your photos in no time, doesn’t matter how you store them today...', '#', 'orange' ) }}
+      {{ floatingContent.el('right','assets/img/home/automatic_organization.jpg', '90px', 'Automatic
+Organization','BilderAi analyses your photos and organizes them in a timeline and collections by itself.', '#', '' ) }}
     </section>
     {% include "./template-parts/_footer.njk" %}
     {% include "./template-parts/_animation-scripts.njk" %}

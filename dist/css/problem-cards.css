@@ -1,0 +1,21 @@
+@font-face { font-family: "Stolzl Regular"; src: url("/asstes/fonts/Stolzl-Regular.ttf") format("ttf"); }
+
+@font-face { font-family: "Stolzl Medium"; src: url("/asstes/fonts/Stolzl-Medium.ttf") format("ttf"); }
+
+@font-face { font-family: "Stolzl Bold"; src: url("/asstes/fonts/Stolzl-Bold.ttf") format("ttf"); }
+
+.problem-cards .inner .card-container { display: flex; margin-top: 100px; justify-content: space-between; }
+
+.problem-cards .inner .card-container .card { width: 100%; display: flex; flex-direction: column; align-items: center; padding: 50px 30px 65px; color: #fff; text-align: left; border-radius: 26px; }
+
+.problem-cards .inner .card-container .card img { width: 150px; height: 150px; object-fit: contain; margin-bottom: 40px; }
+
+.problem-cards .inner .card-container .card .title { font-size: 42px; line-height: 120%; letter-spacing: -0.02em; margin-bottom: 20px; }
+
+.problem-cards .inner .card-container .card .desc { font-size: 22px; line-height: 130%; letter-spacing: -0.02em; }
+
+.problem-cards .inner .card-container .card:nth-child(1) { background: #1fbcff; }
+
+.problem-cards .inner .card-container .card:nth-child(2) { background: #96dc00; margin: 0 40px; }
+
+.problem-cards .inner .card-container .card:nth-child(3) { background: #ffbb1c; }

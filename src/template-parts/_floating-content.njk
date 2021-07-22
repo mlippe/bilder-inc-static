@@ -1,0 +1,16 @@
+{% macro el(layout, imageSrc, marginTop, title, desc, link, btnColor) %}
+  <div class="floating-content {{ layout }}">
+    <div class="image-container">
+      <img src="{{ imageSrc }}"/>
+    </div>
+    <div class="text-container" style="margin-top: {{ marginTop }}">
+      <div class="inner">
+        <h2>{{ title }}</h2>
+        <h4>{{ desc }}</h4>
+        {% if link %}
+          <a href="{{ link }}" class="button button-large {{ btnColor }}">Learn more</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endmacro %}
