@@ -6,11 +6,23 @@
 
 section.offer { position: relative; padding: 0; margin: 200px 0 350px; }
 
-section.offer > img { position: absolute; top: -15%; left: 0; width: 50%; max-width: 700px; }
+section.offer > img { width: 75%; margin-bottom: -150px; }
 
-section.offer .layout { padding: 42px 0 52px; background: #fff; }
+@media screen and (min-width: 1000px) and (max-width: 1079px) { section.offer > img { width: 600px !important; top: -10% !important; left: -200px !important; } }
 
-section.offer .layout .inner { display: flex; justify-content: flex-end; }
+@media screen and (min-width: 1080px) and (max-width: 1300px) { section.offer > img { width: 600px !important; top: -10% !important; left: -150px !important; } }
+
+@media (min-width: 1000px) { section.offer > img { position: absolute; top: -15%; left: 0; width: 50%; max-width: 700px; } }
+
+section.offer .layout { padding: 175px 0 52px; background: #fff; }
+
+@media (min-width: 600px) { section.offer .layout { padding: 200px 0 60px; } }
+
+@media (min-width: 1000px) { section.offer .layout { padding: 42px 0 52px; } }
+
+section.offer .layout .inner { display: flex; justify-content: center; }
+
+@media (min-width: 1000px) { section.offer .layout .inner { justify-content: flex-end; } }
 
 section.offer .layout .inner .wrapper { max-width: 720px; }
 

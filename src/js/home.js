@@ -2,7 +2,7 @@ const animationSection = document.querySelector(".hero");
 const bilderLogo = animationSection.querySelector(".intro h1");
 const canvas = document.getElementById("start-sequence");
 const context = canvas.getContext("2d");
-const frameCount = 121;
+const frameCount = 150;
 const sceneHeight = 3000 - window.innerHeight;
 const img = new Image();
 let progress = 0;
@@ -12,7 +12,7 @@ let animationInterval;
 context.imageSmoothingEnabled = false;
 
 const currentFrame = (index) =>
-  `assets/start_sequence/StartAnimation1_${index
+  `assets/start_sequence/Startanimpart3_${index
     .toString()
     .padStart(5, "0")}.jpg`;
 

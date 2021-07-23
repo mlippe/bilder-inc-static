@@ -4,10 +4,20 @@
 .floating-content {
   width: 100%;
   max-width: 1800px;
-  height: 1000px;
-  margin: 200px auto;
+  margin: 175px auto;
   position: relative;
   display: flex;
+  flex-direction: column;
+
+  @include tablet {
+    margin: 200px auto;
+  }
+
+  @include desktop {
+    height: 1000px;
+    flex-direction: row;
+    margin: 200px auto;
+  }
 
   .layout {
     width: 100%;
@@ -19,13 +29,29 @@
     width: 100%;
     display: flex;
 
+    @include phone-only {
+      margin-top: 50px !important;
+    }
+
+    @include tablet-only {
+      margin-top: 50px !important;
+    }
+
     .inner {
       display: flex;
       flex-direction: column;
       max-width: 510px;
 
+      @include phone-only {
+        max-width: initial;
+      }
+
       h4 {
-        margin-bottom: 50px;
+        margin-bottom: 30px;
+
+        @include tablet {
+          margin-bottom: 50px;
+        }
       }
 
       .button {
@@ -35,17 +61,28 @@
   }
 
   .image-container {
-    position: absolute;
-    width: 90%;
-    height: 100%;
+    width: 100%;
+
+    @include tablet {
+      width: calc(100% - 35px);
+    }
+
+    @include desktop {
+      position: absolute;
+      width: 90%;
+      height: 100%;
+    }
 
     img {
       width: 100%;
       max-height: 1000px;
       max-width: 1340px;
-      height: 100%;
       object-fit: cover;
-      filter: drop-shadow(0px 2px 50px rgba(0, 0, 0, 0.4));
+      box-shadow: 0 2px 50px rgba(0, 0, 0, 0.4);
+
+      @include tablet {
+        height: 100%;
+      }
     }
   }
 
@@ -62,7 +99,10 @@
     .image-container {
       img {
         object-position: right;
-        border-radius: 0px 25px 25px 0px;
+
+        @include tablet {
+          border-radius: 0px 25px 25px 0px;
+        }
 
         @include large-desktop {
           width: calc(100% - 150px);
@@ -89,9 +129,16 @@
     .image-container {
       left: 10%;
 
+      @include tablet-only {
+        margin-left: 35px;
+      }
+
       img {
-        border-radius: 25px 0px 0px 25px;
         object-position: left;
+
+        @include tablet {
+          border-radius: 25px 0px 0px 25px;
+        }
 
         @include large-desktop {
           width: calc(100% - 150px);
