@@ -1,0 +1,63 @@
+@font-face { font-family: "Stolzl Regular"; src: url("/asstes/fonts/Stolzl-Regular.ttf") format("ttf"); }
+
+@font-face { font-family: "Stolzl Medium"; src: url("/asstes/fonts/Stolzl-Medium.ttf") format("ttf"); }
+
+@font-face { font-family: "Stolzl Bold"; src: url("/asstes/fonts/Stolzl-Bold.ttf") format("ttf"); }
+
+.features .hero { padding: 0; background: #181413; position: relative; margin-top: 70px; height: 1050px; }
+
+.features .hero .background-animation { position: absolute; left: 0; width: 100%; height: 100%; }
+
+.features .hero .background-animation .gradient { width: 100%; position: absolute; height: 100px; left: 0; }
+
+.features .hero .background-animation .gradient.top { top: 0; background: linear-gradient(0deg, rgba(24, 20, 19, 0), #181413); }
+
+.features .hero .background-animation .gradient.bottom { bottom: 0; background: linear-gradient(180deg, rgba(24, 20, 19, 0), #181413); }
+
+.features .hero .background-animation img { width: 100%; height: 100%; object-fit: cover; }
+
+.features .hero .layout { position: relative; height: 100%; z-index: 1; text-align: center; }
+
+.features .hero .layout .inner { display: flex; flex-direction: column; align-items: center; }
+
+.features .hero .layout .inner h1 { max-width: 1040px; }
+
+.features .hero .layout .inner h3 { max-width: 830px; }
+
+.features section.bilder-ai { position: relative; }
+
+@media (min-width: 600px) { .features section.bilder-ai { height: 1800px; } }
+
+.features section.bilder-ai .image-container { width: 100%; display: flex; justify-content: center; }
+
+@media (min-width: 600px) { .features section.bilder-ai .image-container { position: absolute; } }
+
+.features section.bilder-ai .image-container img { width: 100%; max-width: 1500px; }
+
+.features section.bilder-ai .inner { position: relative; }
+
+.features section.bilder-ai .inner .content { display: flex; justify-content: flex-end; }
+
+.features section.bilder-ai .inner .content .text-wrap { margin-top: -100px; max-width: 600px; text-align: right; text-shadow: 0 0 50px rgba(0, 0, 0, 0.7); }
+
+@media (min-width: 600px) { .features section.bilder-ai .inner .content .text-wrap { margin-top: 150px; max-width: 600px; } }
+
+@media (min-width: 1000px) { .features section.bilder-ai .inner .content .text-wrap { margin-top: 300px; max-width: 830px; } }
+
+.features section.bilder-ai .inner .content .text-wrap h1 em { color: #1fbcff; }
+
+.features section.organization, .features section.sharing { padding-bottom: 0; }
+
+.features section.organization .intro, .features section.sharing .intro { width: 100%; position: relative; }
+
+.features section.organization .intro .layout, .features section.sharing .intro .layout { text-align: center; }
+
+.features section.organization .intro .layout h1 em, .features section.sharing .intro .layout h1 em { color: #ffbb1c; }
+
+.features section.sharing .intro .layout h1 em { color: #96dc00; }
+
+.features section.anywhere .intro .layout h1 { text-align: center; }
+
+.features section.anywhere .intro .layout h1 em { color: #ffbb1c; }
+
+.features img { width: 100%; }

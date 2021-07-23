@@ -4,82 +4,84 @@
 
 @font-face { font-family: "Stolzl Bold"; src: url("/asstes/fonts/Stolzl-Bold.ttf") format("ttf"); }
 
-.hero { background: #000; }
+.home .scrollmagic-pin-spacer { overflow: hidden; }
 
-.hero canvas { position: absolute; top: 0; left: 0; }
+.home .hero { padding: 0; background: #000; }
 
-.hero .wrapper { position: relative; max-width: 1250px; height: 100vh; margin: 0 auto; z-index: 2; }
+.home .hero canvas { position: absolute; top: 0; left: 0; }
 
-.hero .wrapper .text-container { position: absolute; top: 16vh; left: 30px; width: 80%; max-width: 670px; }
+.home .hero .wrapper { position: relative; max-width: 1250px; height: 100vh; margin: 0 auto; z-index: 2; }
 
-@media (min-width: 600px) { .hero .wrapper .text-container { top: 45%; left: 50px; width: 100%; } }
+.home .hero .wrapper .text-container { position: absolute; top: 16vh; left: 30px; width: 80%; max-width: 670px; }
 
-.hero .wrapper .text-container em { color: #96dc00; }
+@media (min-width: 600px) { .home .hero .wrapper .text-container { top: 45%; left: 50px; width: 100%; } }
 
-.hero .wrapper .logo { position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); z-index: 2; text-align: center; width: 80%; }
+.home .hero .wrapper .text-container em { color: #96dc00; }
 
-.hero .scroll-indicator { display: none; }
+.home .hero .wrapper .logo { position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); z-index: 2; text-align: center; width: 80%; }
 
-.hero.inview .scroll-indicator { display: flex; }
+.home .hero .scroll-indicator { display: none; }
 
-section.one-central-space { width: 100%; position: relative; text-align: center; }
+.home .hero.inview .scroll-indicator { display: flex; }
 
-section.one-central-space .content { max-width: 1050px; z-index: 1; }
+.home section.one-central-space { width: 100%; position: relative; text-align: center; }
 
-section.one-central-space .content h1 em { color: #1fbcff; }
+.home section.one-central-space .content { max-width: 1050px; z-index: 1; }
 
-section.one-central-space .content h3 { max-width: 840px; margin: 0 auto; }
+.home section.one-central-space .content h1 em { color: #1fbcff; }
 
-section.one-central-space > img { width: 100%; margin: 30px 0 60px; }
+.home section.one-central-space .content h3 { max-width: 840px; margin: 0 auto; }
 
-@media (min-width: 600px) { section.one-central-space > img { margin: 20px 0 40px; } }
+.home section.one-central-space > img { width: 100%; margin: 30px 0 60px; }
 
-@media (min-width: 1000px) { section.one-central-space > img { margin: -50px 0 0; } }
+@media (min-width: 600px) { .home section.one-central-space > img { margin: 20px 0 40px; } }
 
-section.ecosystem { padding-top: 0; padding-bottom: 0; background: #25262b; }
+@media (min-width: 1000px) { .home section.one-central-space > img { margin: -50px 0 0; } }
 
-section.ecosystem .intro { width: 100%; position: relative; }
+.home section.ecosystem { padding-top: 0; padding-bottom: 0; background: #25262b; }
 
-section.ecosystem .intro > img { width: 100%; }
+.home section.ecosystem .intro { width: 100%; position: relative; }
 
-section.ecosystem .intro .layout { margin-top: -100px; }
+.home section.ecosystem .intro > img { width: 100%; }
 
-section.ecosystem .intro .layout h1 em { color: #ffbb1c; }
+.home section.ecosystem .intro .layout { margin-top: -100px; }
 
-section.ecosystem .intro .layout h3 { max-width: 600px; }
+.home section.ecosystem .intro .layout h1 em { color: #ffbb1c; }
 
-@media (min-width: 1000px) { section.ecosystem .intro .layout h3 { max-width: 840px; } }
+.home section.ecosystem .intro .layout h3 { max-width: 600px; }
 
-section.ecosystem .gradient-end { width: 100%; height: 100px; background: linear-gradient(180deg, #25262b, #181413); }
+@media (min-width: 1000px) { .home section.ecosystem .intro .layout h3 { max-width: 840px; } }
 
-@media (min-width: 600px) { section.ecosystem .gradient-end { height: 200px; } }
+.home section.ecosystem .gradient-end { width: 100%; height: 100px; background: linear-gradient(180deg, #25262b, #181413); }
 
-section.testimonials h1 { text-align: center; }
+@media (min-width: 600px) { .home section.ecosystem .gradient-end { height: 200px; } }
 
-section.testimonials .testimonial-container { margin-top: 90px; display: flex; flex-direction: column; align-items: center; }
+.home section.testimonials h1 { text-align: center; }
 
-section.testimonials .testimonial-container .testimonial { max-width: 900px; padding: 40px 25px 30px; border: 1px solid #5f5f5f; border-radius: 24px; position: relative; color: #fff; }
+.home section.testimonials .testimonial-container { margin-top: 90px; display: flex; flex-direction: column; align-items: center; }
 
-@media (min-width: 600px) { section.testimonials .testimonial-container .testimonial { padding: 50px 50px 30px; } }
+.home section.testimonials .testimonial-container .testimonial { max-width: 900px; padding: 40px 25px 30px; border: 1px solid #5f5f5f; border-radius: 24px; position: relative; color: #fff; }
 
-section.testimonials .testimonial-container .testimonial img.quotation-mark { position: absolute; top: 20px; left: 20px; width: 85px; }
+@media (min-width: 600px) { .home section.testimonials .testimonial-container .testimonial { padding: 50px 50px 30px; } }
 
-@media (min-width: 600px) { section.testimonials .testimonial-container .testimonial img.quotation-mark { top: 30px; left: 30px; width: 85px; } }
+.home section.testimonials .testimonial-container .testimonial img.quotation-mark { position: absolute; top: 20px; left: 20px; width: 85px; }
 
-section.testimonials .testimonial-container .testimonial .quote { font-size: 26px; line-height: 150%; }
+@media (min-width: 600px) { .home section.testimonials .testimonial-container .testimonial img.quotation-mark { top: 30px; left: 30px; width: 85px; } }
 
-@media (min-width: 600px) { section.testimonials .testimonial-container .testimonial .quote { font-size: 30px; } }
+.home section.testimonials .testimonial-container .testimonial .quote { font-size: 26px; line-height: 150%; }
 
-@media (min-width: 1000px) { section.testimonials .testimonial-container .testimonial .quote { font-size: 36px; } }
+@media (min-width: 600px) { .home section.testimonials .testimonial-container .testimonial .quote { font-size: 30px; } }
 
-section.testimonials .testimonial-container .testimonial .author { display: flex; align-items: center; margin-top: 65px; position: relative; }
+@media (min-width: 1000px) { .home section.testimonials .testimonial-container .testimonial .quote { font-size: 36px; } }
 
-section.testimonials .testimonial-container .testimonial .author img { width: 50px; height: 50px; border-radius: 50px; }
+.home section.testimonials .testimonial-container .testimonial .author { display: flex; align-items: center; margin-top: 65px; position: relative; }
 
-section.testimonials .testimonial-container .testimonial .author .line { position: absolute; top: -20px; left: 0; width: 30%; height: 1px; background: #5f5f5f; }
+.home section.testimonials .testimonial-container .testimonial .author img { width: 50px; height: 50px; border-radius: 50px; }
 
-section.testimonials .testimonial-container .testimonial .author .text { margin-left: 18px; }
+.home section.testimonials .testimonial-container .testimonial .author .line { position: absolute; top: -20px; left: 0; width: 30%; height: 1px; background: #5f5f5f; }
 
-section.testimonials .testimonial-container .testimonial .author .text .name { font-size: 18px; margin-bottom: 2px; }
+.home section.testimonials .testimonial-container .testimonial .author .text { margin-left: 18px; }
 
-section.testimonials .testimonial-container .testimonial .author .text .profession { font-size: 16px; color: #c6c6c6; }
+.home section.testimonials .testimonial-container .testimonial .author .text .name { font-size: 18px; margin-bottom: 2px; }
+
+.home section.testimonials .testimonial-container .testimonial .author .text .profession { font-size: 16px; color: #c6c6c6; }

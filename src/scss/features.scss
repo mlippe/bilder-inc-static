@@ -1,0 +1,163 @@
+@import "_variables.scss";
+@import "mixins";
+
+.features {
+  .hero {
+    padding: 0;
+    background: $chocolate;
+    position: relative;
+    margin-top: 70px;
+    height: 1050px;
+
+    .background-animation {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      .gradient {
+        width: 100%;
+        position: absolute;
+        height: 100px;
+        left: 0;
+
+        &.top {
+          top: 0;
+          background: linear-gradient(0deg, rgba(24, 20, 19, 0), $chocolate);
+        }
+
+        &.bottom {
+          bottom: 0;
+          background: linear-gradient(180deg, rgba(24, 20, 19, 0), $chocolate);
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .layout {
+      position: relative;
+      height: 100%;
+      z-index: 1;
+      text-align: center;
+
+      .inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1 {
+          max-width: 1040px;
+        }
+
+        h3 {
+          max-width: 830px;
+        }
+      }
+    }
+  }
+
+  section.bilder-ai {
+    position: relative;
+
+    @include tablet {
+      height: 1800px;
+    }
+
+    .image-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      @include tablet {
+        position: absolute;
+      }
+
+      img {
+        width: 100%;
+        max-width: 1500px;
+      }
+    }
+
+    .inner {
+      position: relative;
+
+      .content {
+        display: flex;
+        justify-content: flex-end;
+
+        .text-wrap {
+          margin-top: -100px;
+          max-width: 600px;
+          text-align: right;
+          text-shadow: 0 0 50px rgba(0, 0, 0, 0.7);
+
+          @include tablet {
+            margin-top: 150px;
+            max-width: 600px;
+          }
+
+          @include desktop {
+            margin-top: 300px;
+            max-width: 830px;
+          }
+
+          h1 {
+            em {
+              color: $lightblue;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  section.organization,
+  section.sharing {
+    padding-bottom: 0;
+    .intro {
+      width: 100%;
+      position: relative;
+
+      .layout {
+        text-align: center;
+        h1 {
+          em {
+            color: $orange;
+          }
+        }
+      }
+    }
+  }
+
+  section.sharing {
+    .intro {
+      .layout {
+        h1 {
+          em {
+            color: $green;
+          }
+        }
+      }
+    }
+  }
+
+  section.anywhere {
+    .intro {
+      .layout {
+        h1 {
+          text-align: center;
+          em {
+            color: $orange;
+          }
+        }
+      }
+    }
+  }
+  img {
+    width: 100%;
+  }
+}

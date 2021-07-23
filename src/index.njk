@@ -1,13 +1,17 @@
-{% import "./template-parts/_problem-cards.njk" as problemCards %}
+{% import "./template-parts/_footer.njk" as footer %}
 {% import "./template-parts/_floating-content.njk" as floatingContent %}
+{% import "./template-parts/_navbar.njk" as navBar %}
+{% import "./template-parts/_offer-section.njk" as offerSection %}
+{% import "./template-parts/_problem-cards.njk" as problemCards %}
+{% import "./template-parts/_head.njk" as head %}
 <html lang="en">
   <head>
-    {% include "./template-parts/_head.njk" %}
+    {{ head.el(true) }}
     <title>Bilder Inc</title>
   </head>
-  <body>
-    {% include "./template-parts/_navbar.njk" %}
-    <div class="hero">
+  <body class="home">
+    {{ navBar.el(true) }}
+    <section class="hero">
       <div class="wrapper">
         <div class="logo">
           <h2>Meet<br>Bilder Inc.</h2>
@@ -24,7 +28,7 @@
         <img src="assets/img/scroll_indicator.svg"/>
         <div class="text">Scroll down</div>
       </div>
-    </div>
+    </section>
     <section class="one-central-space">
       <div class="inner layout">
         <div class="content grid-max">
@@ -37,7 +41,7 @@
       <img src="/assets/img/home/easy_import.jpg"/>
       <div class="button button-large outline">Why is this so cool?</div>
       <div class="hide-wrapper" style="display: none;">
-        {{ problemCards.problemCards('Bilder Inc. tackles 3 big problems of personal photography today') }}
+        {{ problemCards.el(true,'Bilder Inc. tackles 3 big problems of personal photography today') }}
       </div>
     </section>
     <section class="ecosystem">
@@ -51,13 +55,13 @@
           </div>
         </div>
       </div>
-      {{ floatingContent.el('left','assets/img/home/easy_import2.jpg', '360px', 'Easy importing','Add your photos in no time, doesn’t matter how you store them today...', '#', 'orange' ) }}
-      {{ floatingContent.el('right','assets/img/home/automatic_organization.jpg', '90px', 'Automatic Organization','BilderAi analyses your photos and organizes them in a timeline and collections by itself.', '#', '' ) }}
-      {{ floatingContent.el('left','assets/img/home/book.jpg', '220px', 'Familiar viewing experience','BilderBook album contains 10 beautiful OLED screens. Flip through memories like in the good old times.', '#', 'green' ) }}
-      {{ floatingContent.el('right','assets/img/home/projector.jpg', '125px', 'Effortless slideshows','BilderBeam is quick and easy to set up. It’s 3h battery life gets it through those popcorn nights.', '#', 'blue' ) }}
-      {{ floatingContent.el('left','assets/img/home/social.jpg', '110px', 'Social libraries','Share your favourite photos through BilderApps. Shared images will appear directly in others libraries.', '#', '' ) }}
-      {{ floatingContent.el('right','assets/img/home/backups.jpg', '90px', 'Effortless slideshows','BilderBox is equipped with two drives with a mirrored filesystem. They are also user exchangable. ', '#', 'orange' ) }}
-      {{ floatingContent.el('left','assets/img/home/wifi.jpg', '110px', 'Storage under your control','Your photos stay local in your BilderBox. Simply connect it to home WiFi to access your library anywhere.', '#', 'green' ) }}
+      {{ floatingContent.el(true,'left','assets/img/home/easy_import2.jpg', '360px', 'Easy importing','Add your photos in no time, doesn’t matter how you store them today...', '#', 'orange' ) }}
+      {{ floatingContent.el(true,'right','assets/img/home/automatic_organization.jpg', '90px', 'Automatic Organization','BilderAi analyses your photos and organizes them in a timeline and collections by itself.', '#', '' ) }}
+      {{ floatingContent.el(true,'left','assets/img/home/book.jpg', '220px', 'Familiar viewing experience','BilderBook album contains 10 beautiful OLED screens. Flip through memories like in the good old times.', '#', 'green' ) }}
+      {{ floatingContent.el(true,'right','assets/img/home/projector.jpg', '125px', 'Effortless slideshows','BilderBeam is quick and easy to set up. It’s 3h battery life gets it through those popcorn nights.', '#', 'blue' ) }}
+      {{ floatingContent.el(true,'left','assets/img/home/social.jpg', '110px', 'Social libraries','Share your favourite photos through BilderApps. Shared images will appear directly in others libraries.', '#', '' ) }}
+      {{ floatingContent.el(true,'right','assets/img/home/backups.jpg', '90px', 'Effortless slideshows','BilderBox is equipped with two drives with a mirrored filesystem. They are also user exchangable. ', '#', 'orange' ) }}
+      {{ floatingContent.el(true,'left','assets/img/home/wifi.jpg', '110px', 'Storage under your control','Your photos stay local in your BilderBox. Simply connect it to home WiFi to access your library anywhere.', '#', 'green' ) }}
       <div class="gradient-end"></div>
     </section>
     <section class="testimonials">
@@ -85,8 +89,8 @@
         </div>
       </div>
     </section>
-    {% include "./template-parts/_offer-section.njk" %}
-    {% include "./template-parts/_footer.njk" %}
+    {{ offerSection.el(true) }}
+    {{ footer.el(true) }}
     {% include "./template-parts/_animation-scripts.njk" %}
     <script src="js/home.js"></script>
     <script src="js/main.js"></script>

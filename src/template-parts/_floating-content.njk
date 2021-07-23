@@ -1,18 +1,26 @@
-{% macro el(layout, imageSrc, marginTop, title, desc, link, btnColor) %}
-  <div class="floating-content {{ layout }}">
-    <div class="image-container">
-      <img src="{{ imageSrc }}"/>
-    </div>
-    <div class="layout">
-      <div class="text-container grid-max" style="margin-top: {{ marginTop }}">
-        <div class="inner">
-          <h2>{{ title }}</h2>
-          <h4>{{ desc }}</h4>
-          {% if link %}
-            <a href="{{ link }}" class="button button-large {{ btnColor }}">Learn more</a>
-          {% endif %}
+{% macro el(isHome, layout, imageSrc, marginTop, title, desc, link, btnColor, noShadow) %}
+  {% if noShadow %}
+    <div class="floating-content no-shadow {{ layout }}">
+    {% else %}
+      <div class="floating-content {{ layout }}">
+      {% endif %}
+      <div class="image-container">
+        {% if isHome %}
+          <img src="{{ imageSrc }}"/>
+        {% else %}
+          <img src="../{{ imageSrc }}"/>
+        {% endif %}
+      </div>
+      <div class="layout">
+        <div class="text-container grid-max" style="margin-top: {{ marginTop }}">
+          <div class="inner">
+            <h2>{{ title }}</h2>
+            <h4>{{ desc }}</h4>
+            {% if link %}
+              <a href="{{ link }}" class="button button-large {{ btnColor }}">Learn more</a>
+            {% endif %}
+          </div>
         </div>
       </div>
     </div>
-  </div>
-{% endmacro %}
+  {% endmacro %}

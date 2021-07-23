@@ -26,6 +26,8 @@ const preloadImages = () => {
   }
 };
 
+preloadImages();
+
 function drawToCanvas(img) {
   const scale = Math.max(canvas.width / img.width, canvas.height / img.height);
   // get the top left position of the image
@@ -40,8 +42,6 @@ canvas.height = innerHeight;
 img.onload = function () {
   drawToCanvas(img);
 };
-
-preloadImages();
 
 //SCROLLMAGIC
 const controller = new ScrollMagic.Controller();
@@ -97,8 +97,6 @@ function resizeListener() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     drawToCanvas(img);
-    scene.update();
-    scene2.update();
   }, 200);
 }
 
@@ -106,8 +104,8 @@ function initAnimation() {
   resizeListener();
   window.addEventListener("resize", resizeListener);
 
-  scene.on("update", (e) => {
-    progress = e.scrollPos / (sceneHeight * 0.9);
+  scene.on("progress", (e) => {
+    progress = e.progress;
     console.log("progress", progress);
   });
 

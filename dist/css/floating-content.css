@@ -6,6 +6,8 @@
 
 .floating-content { width: 100%; max-width: 1800px; margin: 175px auto; position: relative; display: flex; flex-direction: column; }
 
+.floating-content.no-shadow .image-container img { box-shadow: none; }
+
 @media (min-width: 600px) { .floating-content { margin: 200px auto; } }
 
 @media (min-width: 1000px) { .floating-content { height: 1000px; flex-direction: row; margin: 200px auto; } }
@@ -65,3 +67,23 @@
 @media (min-width: 1440px) { .floating-content.right .image-container img { width: calc(100% - 150px); margin-left: 150px; } }
 
 @media screen and (min-width: 1815px) { .floating-content.right .image-container img { border-radius: 25px; } }
+
+.floating-content.center { justify-content: center; }
+
+.floating-content.center .text-container { text-align: center; justify-content: center; }
+
+@media (min-width: 1000px) { .floating-content.center .text-container { margin-top: -50px !important; } }
+
+.floating-content.center .text-container .inner { align-items: center; max-width: 600px; }
+
+@media (min-width: 1000px) { .floating-content.center .text-container .inner { text-shadow: 0 0 30px black; } }
+
+.floating-content.center .image-container { width: 100%; height: auto; }
+
+@media (min-width: 600px) { .floating-content.center .image-container { width: calc(100% - 70px); margin-left: 35px; margin-right: 35px; } }
+
+@media (min-width: 1000px) { .floating-content.center .image-container { width: calc(100% - 100px); margin-left: 50px; margin-right: 50px; } }
+
+.floating-content.center .image-container img { object-position: center; width: 100%; max-height: inital; max-width: initial; }
+
+@media (min-width: 600px) { .floating-content.center .image-container img { border-radius: 25px; } }

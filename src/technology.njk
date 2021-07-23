@@ -1,0 +1,101 @@
+{% import "./template-parts/_footer.njk" as footer %}
+{% import "./template-parts/_floating-content.njk" as floatingContent %}
+{% import "./template-parts/_navbar.njk" as navBar %}
+{% import "./template-parts/_offer-section.njk" as offerSection %}
+{% import "./template-parts/_problem-cards.njk" as problemCards %}
+{% import "./template-parts/_head.njk" as head %}
+<html lang="en">
+  <head>
+    {{ head.el(false) }}
+    <title>Technology - Bilder Inc</title>
+  </head>
+  <body class="technology">
+    {{ navBar.el(false) }}
+    <section class="hero">
+      <div class="background">
+        <img class="projector" src="../assets/img/technology/projector-scanner.png"/>
+        <img class="book" src="../assets/img/technology/book.png"/>
+        <img class="box" src="../assets/img/technology/box.png"/>
+      </div>
+      <div class="layout">
+        <div class="inner grid-max">
+          <h1>Designed to give
+            <em>your photos a new home.</em>
+          </h1>
+          <h3>Discover the Bilder family.</h3>
+        </div>
+      </div>
+    </section>
+    <section class="devices">
+      <div class="layout">
+        <div class="inner grid-max">
+          <div class="unit">
+            <div class="device">
+              <div class="image-container">
+                <img src="../assets/img/technology/frontview_box.png"/>
+              </div>
+              <div class="text">
+                <div class="name">BilderBox</div>
+                <div class="desc">The heart of the system</div>
+              </div>
+              <a href="#bilderbox" class="button">Discover</a>
+            </div>
+            <div class="device">
+              <div class="image-container">
+                <img src="../assets/img/technology/frontview_book.png"/>
+              </div>
+              <div class="text">
+                <div class="name">BilderBook</div>
+                <div class="desc">Digital photo album</div>
+              </div>
+              <a href="#" class="button">Discover</a>
+            </div>
+          </div>
+          <div class="unit">
+            <div class="device">
+              <div class="image-container">
+                <img src="../assets/img/technology/frontview_projector.png"/>
+              </div>
+              <div class="text">
+                <div class="name">BilderBeam</div>
+                <div class="desc">Mini photo projector</div>
+              </div>
+              <a href="#" class="button">Discover</a>
+            </div>
+            <div class="device">
+              <div class="image-container">
+                <img src="../assets/img/technology/frontview_scanner.png"/>
+              </div>
+              <div class="text">
+                <div class="name">BilderScan</div>
+                <div class="desc">Portable scanner</div>
+              </div>
+              <a href="#" class="button">Discover</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="bilderbox" class="hardware bilderbox">
+      <div class="layout">
+        <div class="inner grid-max">
+          <div class="intro">
+            <h1>
+              <em>BilderBox</em>
+              - The heart of the system</h1>
+            <h3>BilderBox houses all of the Bilder famliy as well as storage and processing power.</h3>
+          </div>
+        </div>
+      </div>
+      <div class="animation-area">
+        <canvas id="explosion-sequence"></canvas>
+      </div>
+    </section>
+    {{ offerSection.el(false) }}
+    {{ footer.el(false) }}
+    {% include "./template-parts/_animation-scripts.njk" %}
+    <script src="../js/main.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/technology.js"></script>
+  </body>
+</html>

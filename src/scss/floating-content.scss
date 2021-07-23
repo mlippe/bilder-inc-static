@@ -9,6 +9,14 @@
   display: flex;
   flex-direction: column;
 
+  &.no-shadow {
+    .image-container {
+      img {
+        box-shadow: none;
+      }
+    }
+  }
+
   @include tablet {
     margin: 200px auto;
   }
@@ -146,6 +154,55 @@
         }
 
         @media screen and (min-width: 1815px) {
+          border-radius: 25px;
+        }
+      }
+    }
+  }
+
+  &.center {
+    justify-content: center;
+
+    .text-container {
+      text-align: center;
+      justify-content: center;
+
+      @include desktop {
+        margin-top: -50px !important;
+      }
+
+      .inner {
+        align-items: center;
+        max-width: 600px;
+
+        @include desktop {
+          text-shadow: 0 0 30px rgba(0, 0, 0, 1);
+        }
+      }
+    }
+
+    .image-container {
+      width: 100%;
+      height: auto;
+
+      @include tablet {
+        width: calc(100% - 70px);
+        margin-left: 35px;
+        margin-right: 35px;
+      }
+      @include desktop {
+        width: calc(100% - 100px);
+        margin-left: 50px;
+        margin-right: 50px;
+      }
+
+      img {
+        object-position: center;
+        width: 100%;
+        max-height: inital;
+        max-width: initial;
+
+        @include tablet {
           border-radius: 25px;
         }
       }

@@ -1,12 +1,15 @@
-<section class="offer">
-  <img src="/assets/img/offer.png"/>
-  <div class="layout">
-    <div class="inner grid-max">
-      <div class="wrapper">
-        <h2>Tired of cluttered photo libraries?</h2>
-        <h4>Buy your BilderBox now and get an exclusive Early-Bird offer.</h4>
-        <a class="button button-large" href="#">Claim Offer</a>
+{% macro el(isHome) %}
+  <section class="offer">
+    {%if isHome%}
+      <img src="/assets/img/offer.png"/> {%else%} <img src="../assets/img/offer.png"/> {% endif%}
+      <div class="layout">
+        <div class="inner grid-max">
+          <div class="wrapper">
+            <h2>Tired of cluttered photo libraries?</h2>
+            <h4>Buy your BilderBox now and get an exclusive Early-Bird offer.</h4>
+            <a class="button button-large" href="#">Claim Offer</a>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
+    {%endmacro%}

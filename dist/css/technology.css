@@ -1,0 +1,101 @@
+@font-face { font-family: "Stolzl Regular"; src: url("/asstes/fonts/Stolzl-Regular.ttf") format("ttf"); }
+
+@font-face { font-family: "Stolzl Medium"; src: url("/asstes/fonts/Stolzl-Medium.ttf") format("ttf"); }
+
+@font-face { font-family: "Stolzl Bold"; src: url("/asstes/fonts/Stolzl-Bold.ttf") format("ttf"); }
+
+.technology .hero { padding: 0; background: #181413; position: relative; margin-top: 70px; height: 800px; }
+
+@media (min-width: 600px) { .technology .hero { height: 1000px; } }
+
+@media (min-width: 1000px) { .technology .hero { height: 1500px; } }
+
+@media screen and (min-width: 1000px) and (max-width: 1350px) { .technology .hero { height: 1200px; } }
+
+.technology .hero .background { position: absolute; left: 50%; width: 100%; height: 100%; max-width: 2000px; transform: translate(-50%, 0px); overflow: hidden; }
+
+.technology .hero .background img { position: absolute; }
+
+.technology .hero .background .projector { top: 0; left: 0; width: 50%; }
+
+@media (max-width: 599px) { .technology .hero .background .projector { width: 80%; } }
+
+@media screen and (min-width: 600px) and (max-width: 800px) { .technology .hero .background .projector { width: 70%; } }
+
+@media (min-width: 1850px) { .technology .hero .background .projector { width: 47%; } }
+
+.technology .hero .background .book { top: 19%; right: 0; width: 45%; }
+
+@media (max-width: 599px) { .technology .hero .background .book { top: 33%; right: -60px; width: 65%; } }
+
+@media screen and (min-width: 600px) and (max-width: 800px) { .technology .hero .background .book { top: 34%; right: -50px; width: 65%; } }
+
+.technology .hero .background .box { bottom: 0%; left: 0; width: 90%; }
+
+@media (max-width: 599px) { .technology .hero .background .box { bottom: 0%; left: -50px; width: 120%; } }
+
+@media screen and (min-width: 600px) and (max-width: 800px) { .technology .hero .background .box { bottom: -5%; left: -80px; width: 110%; } }
+
+@media (min-width: 1850px) { .technology .hero .background .box { bottom: -10%; } }
+
+.technology .hero .layout { position: relative; height: 100%; z-index: 1; }
+
+.technology .hero .layout .inner { display: flex; flex-direction: column; }
+
+.technology .hero .layout .inner h1 { max-width: 400px; text-shadow: 0 0 20px rgba(0, 0, 0, 0.9); }
+
+@media (min-width: 600px) { .technology .hero .layout .inner h1 { max-width: 550px; } }
+
+@media (min-width: 1000px) { .technology .hero .layout .inner h1 { max-width: 700px; } }
+
+.technology .hero .layout .inner h1 em { color: #ffbb1c; }
+
+.technology .hero .layout .inner h3 { max-width: 400px; text-shadow: 0 0 20px rgba(0, 0, 0, 0.9); }
+
+@media (min-width: 600px) { .technology .hero .layout .inner h3 { max-width: 550px; } }
+
+@media (min-width: 1000px) { .technology .hero .layout .inner h3 { max-width: 700px; } }
+
+.technology section.devices { padding-top: 50px; }
+
+.technology section.devices .inner { display: flex; }
+
+@media screen and (max-width: 1140px) { .technology section.devices .inner { flex-direction: column; align-items: center; } }
+
+.technology section.devices .inner .unit { display: flex; width: 100%; justify-content: center; }
+
+@media (max-width: 599px) { .technology section.devices .inner .unit { flex-direction: column; align-items: center; } }
+
+.technology section.devices .inner .unit:first-child { margin-right: 50px; }
+
+@media screen and (max-width: 1140px) { .technology section.devices .inner .unit:first-child { margin-right: 0; margin-bottom: 50px; } }
+
+.technology section.devices .inner .device { width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 25px; background: #fff; border-radius: 20px; height: 280px; max-width: 300px; transition: transform 0.6s ease-in-out; }
+
+.technology section.devices .inner .device:hover { transform: scale(1.03); }
+
+.technology section.devices .inner .device:first-child { margin-right: 50px; }
+
+@media (max-width: 599px) { .technology section.devices .inner .device:first-child { margin-right: 0; margin-bottom: 50px; } }
+
+.technology section.devices .inner .device .image-container { width: 90%; height: 35%; }
+
+.technology section.devices .inner .device .image-container img { width: 100%; height: 100%; object-fit: contain; }
+
+.technology section.devices .inner .device .text { text-align: center; margin-top: 10px; }
+
+.technology section.devices .inner .device .text .name { font-size: 24px; margin-bottom: 2px; }
+
+.technology section.devices .inner .device .text .desc { font-size: 16px; margin-bottom: 24px; color: #5f5f5f; }
+
+.technology section.devices .inner .device .button { font-size: 20px; padding: 17px; width: 100%; }
+
+.technology section.hardware .inner .intro { text-align: center; display: flex; flex-direction: column; align-items: center; }
+
+.technology section.hardware .inner .intro h1 { max-width: 1030px; }
+
+.technology section.hardware .inner .intro h3 { max-width: 890px; }
+
+.technology section.bilderbox h1 em { color: #ffbb1c; }
+
+.technology section.bilderbox .animation-area canvas { width: 100%; }

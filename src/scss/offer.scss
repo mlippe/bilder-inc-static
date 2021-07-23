@@ -4,7 +4,11 @@
 section.offer {
   position: relative;
   padding: 0;
-  margin: 200px 0 350px;
+  margin: 150px 0 250px;
+
+  @include tablet {
+    margin: 200px 0 350px;
+  }
 
   > img {
     width: 75%;

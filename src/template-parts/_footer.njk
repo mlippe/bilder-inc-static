@@ -1,36 +1,40 @@
-<section class="footer">
-  <div class="color-border">
-    <div class="border-part"></div>
-    <div class="border-part"></div>
-    <div class="border-part"></div>
-    <div class="border-part"></div>
-    <div class="border-part"></div>
-  </div>
-  <div class="layout">
-    <div class="inner grid-max">
-      <div class="top">
-        <div class="left">
-          <div class="unit">
-            <img class="logo" src="/assets/img/logo.png"/>
-          </div>
-          <div class="unit link">
-            <a href="/about">About us</a>
-            <a href="/features">Features</a>
-            <a href="/technology">Technology</a>
-          </div>
-          <div class="unit fade link">
-            <a href="/imprint">Imprint</a>
-            <a href="/privacy">Privacy</a>
-            <a href="mailto:@lippe-mann.de">Contact</a>
-          </div>
-        </div>
-        <div class="right">
-          <a href="buy-now" class="button button-small">Buy Now</a>
-        </div>
-      </div>
-      <div class="bottom">
-        © 2021 Bilder Inc. Made with ❤️, 🍺 and 🥨️ in Munich.
-      </div>
+{% macro el(isHome) %}
+  <section class="footer">
+    <div class="color-border">
+      <div class="border-part"></div>
+      <div class="border-part"></div>
+      <div class="border-part"></div>
+      <div class="border-part"></div>
+      <div class="border-part"></div>
     </div>
-  </div>
-</section>
+    <div class="layout">
+      <div class="inner grid-max">
+        <div class="top">
+          <div class="left">
+            <div class="unit">
+              {%if isHome%}
+                <img class="logo" src="/assets/img/logo.png"/> {%else%} <img class="logo" src="../assets/img/logo.png"/>
+                {%endif%}
+              </div>
+              <div class="unit link">
+                <a href="/about">About us</a>
+                <a href="/features">Features</a>
+                <a href="/technology">Technology</a>
+              </div>
+              <div class="unit fade link">
+                <a href="/imprint">Imprint</a>
+                <a href="/privacy">Privacy</a>
+                <a href="mailto:@lippe-mann.de">Contact</a>
+              </div>
+            </div>
+            <div class="right">
+              <a href="buy-now" class="button button-small">Buy Now</a>
+            </div>
+          </div>
+          <div class="bottom">
+            © 2021 Bilder Inc. Made with ❤️, 🍺 and 🥨️ in Munich.
+          </div>
+        </div>
+      </div>
+    </section>
+  {% endmacro %}

@@ -1,221 +1,228 @@
 @import "_variables.scss";
 @import "mixins";
 
-.hero {
-  background: #000;
-
-  canvas {
-    position: absolute;
-    top: 0;
-    left: 0;
+.home {
+  .scrollmagic-pin-spacer {
+    overflow: hidden;
   }
 
-  .wrapper {
-    position: relative;
-    max-width: 1250px;
-    height: 100vh;
-    margin: 0 auto;
-    z-index: 2;
+  .hero {
+    padding: 0;
+    background: #000;
 
-    .text-container {
+    canvas {
       position: absolute;
-      top: 16vh;
-      left: 30px;
-      width: 80%;
-      max-width: 670px;
-
-      @include tablet {
-        top: 45%;
-        left: 50px;
-        width: 100%;
-      }
-
-      em {
-        color: $green;
-      }
+      top: 0;
+      left: 0;
     }
 
-    .logo {
-      position: absolute;
-      top: 45%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      z-index: 2;
-      text-align: center;
-      width: 80%;
-    }
-  }
-
-  .scroll-indicator {
-    display: none;
-  }
-
-  &.inview {
-    .scroll-indicator {
-      display: flex;
-    }
-  }
-}
-
-section.one-central-space {
-  width: 100%;
-  position: relative;
-  text-align: center;
-
-  .content {
-    max-width: 1050px;
-    z-index: 1;
-
-    h1 {
-      em {
-        color: $lightblue;
-      }
-    }
-
-    h3 {
-      max-width: 840px;
+    .wrapper {
+      position: relative;
+      max-width: 1250px;
+      height: 100vh;
       margin: 0 auto;
+      z-index: 2;
+
+      .text-container {
+        position: absolute;
+        top: 16vh;
+        left: 30px;
+        width: 80%;
+        max-width: 670px;
+
+        @include tablet {
+          top: 45%;
+          left: 50px;
+          width: 100%;
+        }
+
+        em {
+          color: $green;
+        }
+      }
+
+      .logo {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        text-align: center;
+        width: 80%;
+      }
+    }
+
+    .scroll-indicator {
+      display: none;
+    }
+
+    &.inview {
+      .scroll-indicator {
+        display: flex;
+      }
     }
   }
 
-  > img {
-    width: 100%;
-    margin: 30px 0 60px;
-
-    @include tablet {
-      margin: 20px 0 40px;
-    }
-
-    @include desktop {
-      margin: -50px 0 0;
-    }
-  }
-}
-
-section.ecosystem {
-  padding-top: 0;
-  padding-bottom: 0;
-  background: #25262b;
-
-  .intro {
+  section.one-central-space {
     width: 100%;
     position: relative;
+    text-align: center;
 
-    > img {
-      width: 100%;
-    }
-
-    .layout {
-      margin-top: -100px;
+    .content {
+      max-width: 1050px;
+      z-index: 1;
 
       h1 {
         em {
-          color: $orange;
+          color: $lightblue;
         }
       }
 
       h3 {
-        max-width: 600px;
-
-        @include desktop {
-          max-width: 840px;
-        }
+        max-width: 840px;
+        margin: 0 auto;
       }
     }
-  }
 
-  .gradient-end {
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(180deg, #25262b, $chocolate);
-
-    @include tablet {
-      height: 200px;
-    }
-  }
-}
-
-section.testimonials {
-  h1 {
-    text-align: center;
-  }
-
-  .testimonial-container {
-    margin-top: 90px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    .testimonial {
-      max-width: 900px;
-      padding: 40px 25px 30px;
-      border: 1px solid $medium-grey;
-      border-radius: 24px;
-      position: relative;
-      color: $white;
+    > img {
+      width: 100%;
+      margin: 30px 0 60px;
 
       @include tablet {
-        padding: 50px 50px 30px;
+        margin: 20px 0 40px;
       }
 
-      img.quotation-mark {
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        width: 85px;
+      @include desktop {
+        margin: -50px 0 0;
+      }
+    }
+  }
 
-        @include tablet {
-          top: 30px;
-          left: 30px;
-          width: 85px;
-        }
+  section.ecosystem {
+    padding-top: 0;
+    padding-bottom: 0;
+    background: #25262b;
+
+    .intro {
+      width: 100%;
+      position: relative;
+
+      > img {
+        width: 100%;
       }
 
-      .quote {
-        font-size: 26px;
-        line-height: 150%;
+      .layout {
+        margin-top: -100px;
 
-        @include tablet {
-          font-size: 30px;
+        h1 {
+          em {
+            color: $orange;
+          }
         }
 
-        @include desktop {
-          font-size: 36px;
+        h3 {
+          max-width: 600px;
+
+          @include desktop {
+            max-width: 840px;
+          }
         }
       }
+    }
 
-      .author {
-        display: flex;
-        align-items: center;
-        margin-top: 65px;
+    .gradient-end {
+      width: 100%;
+      height: 100px;
+      background: linear-gradient(180deg, #25262b, $chocolate);
+
+      @include tablet {
+        height: 200px;
+      }
+    }
+  }
+
+  section.testimonials {
+    h1 {
+      text-align: center;
+    }
+
+    .testimonial-container {
+      margin-top: 90px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .testimonial {
+        max-width: 900px;
+        padding: 40px 25px 30px;
+        border: 1px solid $medium-grey;
+        border-radius: 24px;
         position: relative;
+        color: $white;
 
-        img {
-          width: 50px;
-          height: 50px;
-          border-radius: 50px;
+        @include tablet {
+          padding: 50px 50px 30px;
         }
 
-        .line {
+        img.quotation-mark {
           position: absolute;
-          top: -20px;
-          left: 0;
-          width: 30%;
-          height: 1px;
-          background: $medium-grey;
+          top: 20px;
+          left: 20px;
+          width: 85px;
+
+          @include tablet {
+            top: 30px;
+            left: 30px;
+            width: 85px;
+          }
         }
 
-        .text {
-          margin-left: 18px;
+        .quote {
+          font-size: 26px;
+          line-height: 150%;
 
-          .name {
-            font-size: 18px;
-            margin-bottom: 2px;
+          @include tablet {
+            font-size: 30px;
           }
 
-          .profession {
-            font-size: 16px;
-            color: $light-grey;
+          @include desktop {
+            font-size: 36px;
+          }
+        }
+
+        .author {
+          display: flex;
+          align-items: center;
+          margin-top: 65px;
+          position: relative;
+
+          img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+          }
+
+          .line {
+            position: absolute;
+            top: -20px;
+            left: 0;
+            width: 30%;
+            height: 1px;
+            background: $medium-grey;
+          }
+
+          .text {
+            margin-left: 18px;
+
+            .name {
+              font-size: 18px;
+              margin-bottom: 2px;
+            }
+
+            .profession {
+              font-size: 16px;
+              color: $light-grey;
+            }
           }
         }
       }

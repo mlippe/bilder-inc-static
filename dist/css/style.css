@@ -257,85 +257,253 @@ p { font-size: 14px; color: #c6c6c6; line-height: 120%; margin-bottom: 16px; }
 
 @font-face { font-family: "Stolzl Bold"; src: url("/asstes/fonts/Stolzl-Bold.ttf") format("ttf"); }
 
-.hero { background: #000; }
+.home .scrollmagic-pin-spacer { overflow: hidden; }
 
-.hero canvas { position: absolute; top: 0; left: 0; }
+.home .hero { padding: 0; background: #000; }
 
-.hero .wrapper { position: relative; max-width: 1250px; height: 100vh; margin: 0 auto; z-index: 2; }
+.home .hero canvas { position: absolute; top: 0; left: 0; }
 
-.hero .wrapper .text-container { position: absolute; top: 16vh; left: 30px; width: 80%; max-width: 670px; }
+.home .hero .wrapper { position: relative; max-width: 1250px; height: 100vh; margin: 0 auto; z-index: 2; }
 
-@media (min-width: 600px) { .hero .wrapper .text-container { top: 45%; left: 50px; width: 100%; } }
+.home .hero .wrapper .text-container { position: absolute; top: 16vh; left: 30px; width: 80%; max-width: 670px; }
 
-.hero .wrapper .text-container em { color: #96dc00; }
+@media (min-width: 600px) { .home .hero .wrapper .text-container { top: 45%; left: 50px; width: 100%; } }
 
-.hero .wrapper .logo { position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); z-index: 2; text-align: center; width: 80%; }
+.home .hero .wrapper .text-container em { color: #96dc00; }
 
-.hero .scroll-indicator { display: none; }
+.home .hero .wrapper .logo { position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); z-index: 2; text-align: center; width: 80%; }
 
-.hero.inview .scroll-indicator { display: flex; }
+.home .hero .scroll-indicator { display: none; }
 
-section.one-central-space { width: 100%; position: relative; text-align: center; }
+.home .hero.inview .scroll-indicator { display: flex; }
 
-section.one-central-space .content { max-width: 1050px; z-index: 1; }
+.home section.one-central-space { width: 100%; position: relative; text-align: center; }
 
-section.one-central-space .content h1 em { color: #1fbcff; }
+.home section.one-central-space .content { max-width: 1050px; z-index: 1; }
 
-section.one-central-space .content h3 { max-width: 840px; margin: 0 auto; }
+.home section.one-central-space .content h1 em { color: #1fbcff; }
 
-section.one-central-space > img { width: 100%; margin: 30px 0 60px; }
+.home section.one-central-space .content h3 { max-width: 840px; margin: 0 auto; }
 
-@media (min-width: 600px) { section.one-central-space > img { margin: 20px 0 40px; } }
+.home section.one-central-space > img { width: 100%; margin: 30px 0 60px; }
 
-@media (min-width: 1000px) { section.one-central-space > img { margin: -50px 0 0; } }
+@media (min-width: 600px) { .home section.one-central-space > img { margin: 20px 0 40px; } }
 
-section.ecosystem { padding-top: 0; padding-bottom: 0; background: #25262b; }
+@media (min-width: 1000px) { .home section.one-central-space > img { margin: -50px 0 0; } }
 
-section.ecosystem .intro { width: 100%; position: relative; }
+.home section.ecosystem { padding-top: 0; padding-bottom: 0; background: #25262b; }
 
-section.ecosystem .intro > img { width: 100%; }
+.home section.ecosystem .intro { width: 100%; position: relative; }
 
-section.ecosystem .intro .layout { margin-top: -100px; }
+.home section.ecosystem .intro > img { width: 100%; }
 
-section.ecosystem .intro .layout h1 em { color: #ffbb1c; }
+.home section.ecosystem .intro .layout { margin-top: -100px; }
 
-section.ecosystem .intro .layout h3 { max-width: 600px; }
+.home section.ecosystem .intro .layout h1 em { color: #ffbb1c; }
 
-@media (min-width: 1000px) { section.ecosystem .intro .layout h3 { max-width: 840px; } }
+.home section.ecosystem .intro .layout h3 { max-width: 600px; }
 
-section.ecosystem .gradient-end { width: 100%; height: 100px; background: linear-gradient(180deg, #25262b, #181413); }
+@media (min-width: 1000px) { .home section.ecosystem .intro .layout h3 { max-width: 840px; } }
 
-@media (min-width: 600px) { section.ecosystem .gradient-end { height: 200px; } }
+.home section.ecosystem .gradient-end { width: 100%; height: 100px; background: linear-gradient(180deg, #25262b, #181413); }
 
-section.testimonials h1 { text-align: center; }
+@media (min-width: 600px) { .home section.ecosystem .gradient-end { height: 200px; } }
 
-section.testimonials .testimonial-container { margin-top: 90px; display: flex; flex-direction: column; align-items: center; }
+.home section.testimonials h1 { text-align: center; }
 
-section.testimonials .testimonial-container .testimonial { max-width: 900px; padding: 40px 25px 30px; border: 1px solid #5f5f5f; border-radius: 24px; position: relative; color: #fff; }
+.home section.testimonials .testimonial-container { margin-top: 90px; display: flex; flex-direction: column; align-items: center; }
 
-@media (min-width: 600px) { section.testimonials .testimonial-container .testimonial { padding: 50px 50px 30px; } }
+.home section.testimonials .testimonial-container .testimonial { max-width: 900px; padding: 40px 25px 30px; border: 1px solid #5f5f5f; border-radius: 24px; position: relative; color: #fff; }
 
-section.testimonials .testimonial-container .testimonial img.quotation-mark { position: absolute; top: 20px; left: 20px; width: 85px; }
+@media (min-width: 600px) { .home section.testimonials .testimonial-container .testimonial { padding: 50px 50px 30px; } }
 
-@media (min-width: 600px) { section.testimonials .testimonial-container .testimonial img.quotation-mark { top: 30px; left: 30px; width: 85px; } }
+.home section.testimonials .testimonial-container .testimonial img.quotation-mark { position: absolute; top: 20px; left: 20px; width: 85px; }
 
-section.testimonials .testimonial-container .testimonial .quote { font-size: 26px; line-height: 150%; }
+@media (min-width: 600px) { .home section.testimonials .testimonial-container .testimonial img.quotation-mark { top: 30px; left: 30px; width: 85px; } }
 
-@media (min-width: 600px) { section.testimonials .testimonial-container .testimonial .quote { font-size: 30px; } }
+.home section.testimonials .testimonial-container .testimonial .quote { font-size: 26px; line-height: 150%; }
 
-@media (min-width: 1000px) { section.testimonials .testimonial-container .testimonial .quote { font-size: 36px; } }
+@media (min-width: 600px) { .home section.testimonials .testimonial-container .testimonial .quote { font-size: 30px; } }
 
-section.testimonials .testimonial-container .testimonial .author { display: flex; align-items: center; margin-top: 65px; position: relative; }
+@media (min-width: 1000px) { .home section.testimonials .testimonial-container .testimonial .quote { font-size: 36px; } }
 
-section.testimonials .testimonial-container .testimonial .author img { width: 50px; height: 50px; border-radius: 50px; }
+.home section.testimonials .testimonial-container .testimonial .author { display: flex; align-items: center; margin-top: 65px; position: relative; }
 
-section.testimonials .testimonial-container .testimonial .author .line { position: absolute; top: -20px; left: 0; width: 30%; height: 1px; background: #5f5f5f; }
+.home section.testimonials .testimonial-container .testimonial .author img { width: 50px; height: 50px; border-radius: 50px; }
 
-section.testimonials .testimonial-container .testimonial .author .text { margin-left: 18px; }
+.home section.testimonials .testimonial-container .testimonial .author .line { position: absolute; top: -20px; left: 0; width: 30%; height: 1px; background: #5f5f5f; }
 
-section.testimonials .testimonial-container .testimonial .author .text .name { font-size: 18px; margin-bottom: 2px; }
+.home section.testimonials .testimonial-container .testimonial .author .text { margin-left: 18px; }
 
-section.testimonials .testimonial-container .testimonial .author .text .profession { font-size: 16px; color: #c6c6c6; }
+.home section.testimonials .testimonial-container .testimonial .author .text .name { font-size: 18px; margin-bottom: 2px; }
+
+.home section.testimonials .testimonial-container .testimonial .author .text .profession { font-size: 16px; color: #c6c6c6; }
+
+@font-face { font-family: "Stolzl Regular"; src: url("/asstes/fonts/Stolzl-Regular.ttf") format("ttf"); }
+
+@font-face { font-family: "Stolzl Medium"; src: url("/asstes/fonts/Stolzl-Medium.ttf") format("ttf"); }
+
+@font-face { font-family: "Stolzl Bold"; src: url("/asstes/fonts/Stolzl-Bold.ttf") format("ttf"); }
+
+.features .hero { padding: 0; background: #181413; position: relative; margin-top: 70px; height: 1050px; }
+
+.features .hero .background-animation { position: absolute; left: 0; width: 100%; height: 100%; }
+
+.features .hero .background-animation .gradient { width: 100%; position: absolute; height: 100px; left: 0; }
+
+.features .hero .background-animation .gradient.top { top: 0; background: linear-gradient(0deg, rgba(24, 20, 19, 0), #181413); }
+
+.features .hero .background-animation .gradient.bottom { bottom: 0; background: linear-gradient(180deg, rgba(24, 20, 19, 0), #181413); }
+
+.features .hero .background-animation img { width: 100%; height: 100%; object-fit: cover; }
+
+.features .hero .layout { position: relative; height: 100%; z-index: 1; text-align: center; }
+
+.features .hero .layout .inner { display: flex; flex-direction: column; align-items: center; }
+
+.features .hero .layout .inner h1 { max-width: 1040px; }
+
+.features .hero .layout .inner h3 { max-width: 830px; }
+
+.features section.bilder-ai { position: relative; }
+
+@media (min-width: 600px) { .features section.bilder-ai { height: 1800px; } }
+
+.features section.bilder-ai .image-container { width: 100%; display: flex; justify-content: center; }
+
+@media (min-width: 600px) { .features section.bilder-ai .image-container { position: absolute; } }
+
+.features section.bilder-ai .image-container img { width: 100%; max-width: 1500px; }
+
+.features section.bilder-ai .inner { position: relative; }
+
+.features section.bilder-ai .inner .content { display: flex; justify-content: flex-end; }
+
+.features section.bilder-ai .inner .content .text-wrap { margin-top: -100px; max-width: 600px; text-align: right; text-shadow: 0 0 50px rgba(0, 0, 0, 0.7); }
+
+@media (min-width: 600px) { .features section.bilder-ai .inner .content .text-wrap { margin-top: 150px; max-width: 600px; } }
+
+@media (min-width: 1000px) { .features section.bilder-ai .inner .content .text-wrap { margin-top: 300px; max-width: 830px; } }
+
+.features section.bilder-ai .inner .content .text-wrap h1 em { color: #1fbcff; }
+
+.features section.organization, .features section.sharing { padding-bottom: 0; }
+
+.features section.organization .intro, .features section.sharing .intro { width: 100%; position: relative; }
+
+.features section.organization .intro .layout, .features section.sharing .intro .layout { text-align: center; }
+
+.features section.organization .intro .layout h1 em, .features section.sharing .intro .layout h1 em { color: #ffbb1c; }
+
+.features section.sharing .intro .layout h1 em { color: #96dc00; }
+
+.features section.anywhere .intro .layout h1 { text-align: center; }
+
+.features section.anywhere .intro .layout h1 em { color: #ffbb1c; }
+
+.features img { width: 100%; }
+
+@font-face { font-family: "Stolzl Regular"; src: url("/asstes/fonts/Stolzl-Regular.ttf") format("ttf"); }
+
+@font-face { font-family: "Stolzl Medium"; src: url("/asstes/fonts/Stolzl-Medium.ttf") format("ttf"); }
+
+@font-face { font-family: "Stolzl Bold"; src: url("/asstes/fonts/Stolzl-Bold.ttf") format("ttf"); }
+
+.technology .hero { padding: 0; background: #181413; position: relative; margin-top: 70px; height: 800px; }
+
+@media (min-width: 600px) { .technology .hero { height: 1000px; } }
+
+@media (min-width: 1000px) { .technology .hero { height: 1500px; } }
+
+@media screen and (min-width: 1000px) and (max-width: 1350px) { .technology .hero { height: 1200px; } }
+
+.technology .hero .background { position: absolute; left: 50%; width: 100%; height: 100%; max-width: 2000px; transform: translate(-50%, 0px); overflow: hidden; }
+
+.technology .hero .background img { position: absolute; }
+
+.technology .hero .background .projector { top: 0; left: 0; width: 50%; }
+
+@media (max-width: 599px) { .technology .hero .background .projector { width: 80%; } }
+
+@media screen and (min-width: 600px) and (max-width: 800px) { .technology .hero .background .projector { width: 70%; } }
+
+@media (min-width: 1850px) { .technology .hero .background .projector { width: 47%; } }
+
+.technology .hero .background .book { top: 19%; right: 0; width: 45%; }
+
+@media (max-width: 599px) { .technology .hero .background .book { top: 33%; right: -60px; width: 65%; } }
+
+@media screen and (min-width: 600px) and (max-width: 800px) { .technology .hero .background .book { top: 34%; right: -50px; width: 65%; } }
+
+.technology .hero .background .box { bottom: 0%; left: 0; width: 90%; }
+
+@media (max-width: 599px) { .technology .hero .background .box { bottom: 0%; left: -50px; width: 120%; } }
+
+@media screen and (min-width: 600px) and (max-width: 800px) { .technology .hero .background .box { bottom: -5%; left: -80px; width: 110%; } }
+
+@media (min-width: 1850px) { .technology .hero .background .box { bottom: -10%; } }
+
+.technology .hero .layout { position: relative; height: 100%; z-index: 1; }
+
+.technology .hero .layout .inner { display: flex; flex-direction: column; }
+
+.technology .hero .layout .inner h1 { max-width: 400px; text-shadow: 0 0 20px rgba(0, 0, 0, 0.9); }
+
+@media (min-width: 600px) { .technology .hero .layout .inner h1 { max-width: 550px; } }
+
+@media (min-width: 1000px) { .technology .hero .layout .inner h1 { max-width: 700px; } }
+
+.technology .hero .layout .inner h1 em { color: #ffbb1c; }
+
+.technology .hero .layout .inner h3 { max-width: 400px; text-shadow: 0 0 20px rgba(0, 0, 0, 0.9); }
+
+@media (min-width: 600px) { .technology .hero .layout .inner h3 { max-width: 550px; } }
+
+@media (min-width: 1000px) { .technology .hero .layout .inner h3 { max-width: 700px; } }
+
+.technology section.devices { padding-top: 50px; }
+
+.technology section.devices .inner { display: flex; }
+
+@media screen and (max-width: 1140px) { .technology section.devices .inner { flex-direction: column; align-items: center; } }
+
+.technology section.devices .inner .unit { display: flex; width: 100%; justify-content: center; }
+
+@media (max-width: 599px) { .technology section.devices .inner .unit { flex-direction: column; align-items: center; } }
+
+.technology section.devices .inner .unit:first-child { margin-right: 50px; }
+
+@media screen and (max-width: 1140px) { .technology section.devices .inner .unit:first-child { margin-right: 0; margin-bottom: 50px; } }
+
+.technology section.devices .inner .device { width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 25px; background: #fff; border-radius: 20px; height: 280px; max-width: 300px; transition: transform 0.6s ease-in-out; }
+
+.technology section.devices .inner .device:hover { transform: scale(1.03); }
+
+.technology section.devices .inner .device:first-child { margin-right: 50px; }
+
+@media (max-width: 599px) { .technology section.devices .inner .device:first-child { margin-right: 0; margin-bottom: 50px; } }
+
+.technology section.devices .inner .device .image-container { width: 90%; height: 35%; }
+
+.technology section.devices .inner .device .image-container img { width: 100%; height: 100%; object-fit: contain; }
+
+.technology section.devices .inner .device .text { text-align: center; margin-top: 10px; }
+
+.technology section.devices .inner .device .text .name { font-size: 24px; margin-bottom: 2px; }
+
+.technology section.devices .inner .device .text .desc { font-size: 16px; margin-bottom: 24px; color: #5f5f5f; }
+
+.technology section.devices .inner .device .button { font-size: 20px; padding: 17px; width: 100%; }
+
+.technology section.hardware .inner .intro { text-align: center; display: flex; flex-direction: column; align-items: center; }
+
+.technology section.hardware .inner .intro h1 { max-width: 1030px; }
+
+.technology section.hardware .inner .intro h3 { max-width: 890px; }
+
+.technology section.bilderbox h1 em { color: #ffbb1c; }
+
+.technology section.bilderbox .animation-area canvas { width: 100%; }
 
 @font-face { font-family: "Stolzl Regular"; src: url("/asstes/fonts/Stolzl-Regular.ttf") format("ttf"); }
 
@@ -376,6 +544,8 @@ section.testimonials .testimonial-container .testimonial .author .text .professi
 @font-face { font-family: "Stolzl Bold"; src: url("/asstes/fonts/Stolzl-Bold.ttf") format("ttf"); }
 
 .floating-content { width: 100%; max-width: 1800px; margin: 175px auto; position: relative; display: flex; flex-direction: column; }
+
+.floating-content.no-shadow .image-container img { box-shadow: none; }
 
 @media (min-width: 600px) { .floating-content { margin: 200px auto; } }
 
@@ -437,13 +607,35 @@ section.testimonials .testimonial-container .testimonial .author .text .professi
 
 @media screen and (min-width: 1815px) { .floating-content.right .image-container img { border-radius: 25px; } }
 
+.floating-content.center { justify-content: center; }
+
+.floating-content.center .text-container { text-align: center; justify-content: center; }
+
+@media (min-width: 1000px) { .floating-content.center .text-container { margin-top: -50px !important; } }
+
+.floating-content.center .text-container .inner { align-items: center; max-width: 600px; }
+
+@media (min-width: 1000px) { .floating-content.center .text-container .inner { text-shadow: 0 0 30px black; } }
+
+.floating-content.center .image-container { width: 100%; height: auto; }
+
+@media (min-width: 600px) { .floating-content.center .image-container { width: calc(100% - 70px); margin-left: 35px; margin-right: 35px; } }
+
+@media (min-width: 1000px) { .floating-content.center .image-container { width: calc(100% - 100px); margin-left: 50px; margin-right: 50px; } }
+
+.floating-content.center .image-container img { object-position: center; width: 100%; max-height: inital; max-width: initial; }
+
+@media (min-width: 600px) { .floating-content.center .image-container img { border-radius: 25px; } }
+
 @font-face { font-family: "Stolzl Regular"; src: url("/asstes/fonts/Stolzl-Regular.ttf") format("ttf"); }
 
 @font-face { font-family: "Stolzl Medium"; src: url("/asstes/fonts/Stolzl-Medium.ttf") format("ttf"); }
 
 @font-face { font-family: "Stolzl Bold"; src: url("/asstes/fonts/Stolzl-Bold.ttf") format("ttf"); }
 
-section.offer { position: relative; padding: 0; margin: 200px 0 350px; }
+section.offer { position: relative; padding: 0; margin: 150px 0 250px; }
+
+@media (min-width: 600px) { section.offer { margin: 200px 0 350px; } }
 
 section.offer > img { width: 75%; margin-bottom: -150px; }
 
