@@ -10,10 +10,6 @@
 
 @font-face { font-family: "Stolzl Bold"; src: url("/asstes/fonts/Stolzl-Bold.woff") format("woff"); }
 
-.footer { display: none; }
-
-.navbar { display: none !important; }
-
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body { font-family: stolzl, "Stolzl Medium", "Helvetica", sans-serif; font-weight: 500; background: #181413; }

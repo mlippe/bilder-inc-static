@@ -6,7 +6,18 @@
   background: #000;
 
   .inner {
-    margin: 40px 0 60px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    width: calc(100% - 40px);
+
+    @include tablet {
+      width: calc(100% - 70px);
+    }
+
+    @include desktop {
+      flex-direction: row;
+      width: calc(100% - 100px);
+    }
 
     .top {
       display: flex;
@@ -14,18 +25,39 @@
 
       .left {
         display: flex;
+        flex-direction: column;
+
+        @include desktop {
+          flex-direction: row;
+        }
 
         .unit {
           display: flex;
           flex-direction: column;
+
+          .logo {
+            width: 155px;
+          }
 
           &.link {
             margin-top: 5px;
           }
 
           &:nth-child(2) {
-            margin-left: 90px;
-            margin-right: 190px;
+            margin: 40px 0 40px 40px;
+
+            @include desktop {
+              margin-left: 90px;
+              margin-right: 190px;
+            }
+          }
+
+          &:nth-child(3) {
+            margin-left: 40px;
+
+            @include desktop {
+              margin-left: 0;
+            }
           }
 
           &.fade {
@@ -42,11 +74,20 @@
           }
         }
       }
+
+      .right {
+        margin-left: 40px;
+
+        @include desktop {
+          margin: 0;
+        }
+      }
     }
 
     .bottom {
       width: 100%;
       margin-top: 50px;
+
       padding: 20px 0;
       color: $medium-grey;
       border-top: 1px solid $medium-grey;
