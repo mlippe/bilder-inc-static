@@ -94,9 +94,11 @@ function resizeListener() {
   innerWidth = window.innerWidth;
   innerHeight = window.innerHeight;
   setTimeout(() => {
-    canvas.width = innerWidth;
-    canvas.height = innerHeight;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
     drawToCanvas(img);
+    scene.update();
+    scene2.update();
   }, 200);
 }
 

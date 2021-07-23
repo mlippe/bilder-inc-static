@@ -3,36 +3,47 @@
 
 .hero {
   background: #000;
-  overflow: hidden;
 
-  .text-container {
+  canvas {
     position: absolute;
-    top: 40vh;
-    left: 30px;
-    width: 80%;
-    transform: translate(0, -50%);
-    max-width: 670px;
-
-    @include tablet {
-      top: 45%;
-      left: 33%;
-      transform: translate(-50%, -50%);
-      width: 100%;
-    }
-
-    em {
-      color: $green;
-    }
+    top: 0;
+    left: 0;
   }
 
-  .logo {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  .wrapper {
+    position: relative;
+    max-width: 1250px;
+    height: 100vh;
+    margin: 0 auto;
     z-index: 2;
-    text-align: center;
-    width: 80%;
+
+    .text-container {
+      position: absolute;
+      top: 16vh;
+      left: 30px;
+      width: 80%;
+      max-width: 670px;
+
+      @include tablet {
+        top: 45%;
+        left: 50px;
+        width: 100%;
+      }
+
+      em {
+        color: $green;
+      }
+    }
+
+    .logo {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      text-align: center;
+      width: 80%;
+    }
   }
 
   .scroll-indicator {

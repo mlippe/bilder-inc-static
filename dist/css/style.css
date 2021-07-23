@@ -257,15 +257,19 @@ p { font-size: 14px; color: #c6c6c6; line-height: 120%; margin-bottom: 16px; }
 
 @font-face { font-family: "Stolzl Bold"; src: url("/asstes/fonts/Stolzl-Bold.ttf") format("ttf"); }
 
-.hero { background: #000; overflow: hidden; }
+.hero { background: #000; }
 
-.hero .text-container { position: absolute; top: 40vh; left: 30px; width: 80%; transform: translate(0, -50%); max-width: 670px; }
+.hero canvas { position: absolute; top: 0; left: 0; }
 
-@media (min-width: 600px) { .hero .text-container { top: 45%; left: 33%; transform: translate(-50%, -50%); width: 100%; } }
+.hero .wrapper { position: relative; max-width: 1250px; height: 100vh; margin: 0 auto; z-index: 2; }
 
-.hero .text-container em { color: #96dc00; }
+.hero .wrapper .text-container { position: absolute; top: 16vh; left: 30px; width: 80%; max-width: 670px; }
 
-.hero .logo { position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); z-index: 2; text-align: center; width: 80%; }
+@media (min-width: 600px) { .hero .wrapper .text-container { top: 45%; left: 50px; width: 100%; } }
+
+.hero .wrapper .text-container em { color: #96dc00; }
+
+.hero .wrapper .logo { position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); z-index: 2; text-align: center; width: 80%; }
 
 .hero .scroll-indicator { display: none; }
 
