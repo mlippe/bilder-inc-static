@@ -23,11 +23,15 @@
       display: flex;
       justify-content: space-between;
 
+      @include tablet-only {
+        flex-direction: column;
+      }
+
       .left {
         display: flex;
         flex-direction: column;
 
-        @include desktop {
+        @include tablet {
           flex-direction: row;
         }
 
@@ -46,9 +50,16 @@
           &:nth-child(2) {
             margin: 40px 0 40px 40px;
 
+            @include tablet {
+              margin-left: 50px;
+              margin-right: 50px;
+              margin-top: 5px;
+            }
+
             @include desktop {
               margin-left: 90px;
               margin-right: 190px;
+              margin-top: 5px;
             }
           }
 
@@ -78,7 +89,7 @@
       .right {
         margin-left: 40px;
 
-        @include desktop {
+        @include tablet {
           margin: 0;
         }
       }
