@@ -4,9 +4,19 @@
 
 @font-face { font-family: "Stolzl Bold"; src: url("/asstes/fonts/Stolzl-Bold.ttf") format("ttf"); }
 
-.hero { background: #000; overflow-x: hidden; }
+.hero { background: #000; overflow: hidden; }
 
-.hero h1 { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 80px; color: white; }
+.hero .text-container { position: absolute; top: 40vh; left: 30px; width: 80%; transform: translate(0, -50%); max-width: 670px; }
+
+@media (min-width: 600px) { .hero .text-container { top: 45%; left: 33%; transform: translate(-50%, -50%); width: 100%; } }
+
+.hero .text-container em { color: #96dc00; }
+
+.hero .logo { position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); z-index: 2; text-align: center; width: 80%; }
+
+.hero .scroll-indicator { display: none; }
+
+.hero.inview .scroll-indicator { display: flex; }
 
 section.one-central-space { width: 100%; position: relative; text-align: center; }
 

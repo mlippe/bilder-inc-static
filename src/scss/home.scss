@@ -3,15 +3,46 @@
 
 .hero {
   background: #000;
-  overflow-x: hidden;
+  overflow: hidden;
 
-  h1 {
+  .text-container {
     position: absolute;
-    top: 50%;
+    top: 40vh;
+    left: 30px;
+    width: 80%;
+    transform: translate(0, -50%);
+    max-width: 670px;
+
+    @include tablet {
+      top: 45%;
+      left: 33%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+    }
+
+    em {
+      color: $green;
+    }
+  }
+
+  .logo {
+    position: absolute;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 80px;
-    color: white;
+    z-index: 2;
+    text-align: center;
+    width: 80%;
+  }
+
+  .scroll-indicator {
+    display: none;
+  }
+
+  &.inview {
+    .scroll-indicator {
+      display: flex;
+    }
   }
 }
 

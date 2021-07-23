@@ -11,8 +11,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between !important;
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(30px);
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(10px);
   transition: transform 0.3s ease-in-out;
 
   .menu-toggle {
@@ -79,6 +79,12 @@
     .right {
       display: flex;
       align-items: center;
+
+      .logo {
+        img {
+          width: 155px;
+        }
+      }
 
       .button {
         margin-right: 0 !important;
@@ -154,12 +160,16 @@
   left: 0;
   width: 100%;
   height: calc(100% - 70px);
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(30px);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1;
+
+  &.hidden {
+    display: none;
+  }
 
   .close {
     width: 25px;

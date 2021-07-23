@@ -98,13 +98,36 @@ p { font-size: 14px; color: #c6c6c6; line-height: 120%; margin-bottom: 16px; }
 
 .button.blue { background: #003e8e; }
 
+/* ---- SCROLL --- */
+.scroll-indicator { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; opacity: 0.5; }
+
+.scroll-indicator img { animation: scroll-hint 3s ease infinite; }
+
+.scroll-indicator .text { margin-top: 10px; color: #fff; animation: scroll-hint-opacity 3s ease infinite; }
+
+@keyframes scroll-hint { 0% { transform: translate3d(0, 0, 0); }
+  40% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, 8px, 0); }
+  65% { transform: translate3d(0, 2px, 0); }
+  75% { transform: translate3d(0, 6px, 0); }
+  85% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(0, 0, 0); } }
+
+@keyframes scroll-hint-opacity { 0% { opacity: 1; }
+  40% { opacity: 1; }
+  50% { opacity: 0.5; }
+  65% { opacity: 0.8; }
+  75% { opacity: 0.6; }
+  85% { opacity: 1; }
+  100% { opacity: 1; } }
+
 @font-face { font-family: "Stolzl Regular"; src: url("/asstes/fonts/Stolzl-Regular.ttf") format("ttf"); }
 
 @font-face { font-family: "Stolzl Medium"; src: url("/asstes/fonts/Stolzl-Medium.ttf") format("ttf"); }
 
 @font-face { font-family: "Stolzl Bold"; src: url("/asstes/fonts/Stolzl-Bold.ttf") format("ttf"); }
 
-.navbar { position: fixed; top: 0; left: 0; width: 100%; height: 70px; z-index: 9999; display: flex; flex-direction: column; justify-content: space-between !important; background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(30px); transition: transform 0.3s ease-in-out; }
+.navbar { position: fixed; top: 0; left: 0; width: 100%; height: 70px; z-index: 9999; display: flex; flex-direction: column; justify-content: space-between !important; background: rgba(0, 0, 0, 0.75); backdrop-filter: blur(10px); transition: transform 0.3s ease-in-out; }
 
 @media (min-width: 1000px) { .navbar .menu-toggle { display: none; } }
 
@@ -127,6 +150,8 @@ p { font-size: 14px; color: #c6c6c6; line-height: 120%; margin-bottom: 16px; }
 @media (min-width: 1000px) { .navbar .inner { width: calc(100% - 100px); margin: 14px 50px 0; } }
 
 .navbar .inner .left, .navbar .inner .right { display: flex; align-items: center; }
+
+.navbar .inner .left .logo img, .navbar .inner .right .logo img { width: 155px; }
 
 .navbar .inner .left .button, .navbar .inner .right .button { margin-right: 0 !important; }
 
@@ -154,7 +179,9 @@ p { font-size: 14px; color: #c6c6c6; line-height: 120%; margin-bottom: 16px; }
 
 .navbar .color-border .border-part:nth-child(5) { background: #003e8e; }
 
-.menu-mobile { position: fixed; top: 70px; left: 0; width: 100%; height: calc(100% - 70px); background: rgba(0, 0, 0, 0.4); backdrop-filter: blur(30px); display: flex; justify-content: center; align-items: center; z-index: 1; }
+.menu-mobile { position: fixed; top: 70px; left: 0; width: 100%; height: calc(100% - 70px); background: rgba(0, 0, 0, 0.8); backdrop-filter: blur(30px); display: flex; justify-content: center; align-items: center; z-index: 1; }
+
+.menu-mobile.hidden { display: none; }
 
 .menu-mobile .close { width: 25px; margin-top: 35px; opacity: 0.7; }
 
@@ -230,9 +257,19 @@ p { font-size: 14px; color: #c6c6c6; line-height: 120%; margin-bottom: 16px; }
 
 @font-face { font-family: "Stolzl Bold"; src: url("/asstes/fonts/Stolzl-Bold.ttf") format("ttf"); }
 
-.hero { background: #000; overflow-x: hidden; }
+.hero { background: #000; overflow: hidden; }
 
-.hero h1 { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 80px; color: white; }
+.hero .text-container { position: absolute; top: 40vh; left: 30px; width: 80%; transform: translate(0, -50%); max-width: 670px; }
+
+@media (min-width: 600px) { .hero .text-container { top: 45%; left: 33%; transform: translate(-50%, -50%); width: 100%; } }
+
+.hero .text-container em { color: #96dc00; }
+
+.hero .logo { position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); z-index: 2; text-align: center; width: 80%; }
+
+.hero .scroll-indicator { display: none; }
+
+.hero.inview .scroll-indicator { display: flex; }
 
 section.one-central-space { width: 100%; position: relative; text-align: center; }
 

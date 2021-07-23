@@ -1,9 +1,12 @@
 const animationSection = document.querySelector(".hero");
-const bilderLogo = animationSection.querySelector(".intro h1");
+const bilderLogo = animationSection.querySelector(".logo");
+const textContainer = animationSection.querySelector(".text-container");
 const canvas = document.getElementById("start-sequence");
 const context = canvas.getContext("2d");
-const frameCount = 150;
-const sceneHeight = 3000 - window.innerHeight;
+let innerWidth = window.innerWidth;
+let innerHeight = window.innerHeight;
+const frameCount = 155;
+const sceneHeight = 2500 - innerHeight;
 const img = new Image();
 let progress = 0;
 let delay = 0;
@@ -32,8 +35,8 @@ function drawToCanvas(img) {
 }
 
 img.src = currentFrame(1);
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.width = innerWidth;
+canvas.height = innerHeight;
 img.onload = function () {
   drawToCanvas(img);
 };
@@ -49,19 +52,35 @@ let scene = new ScrollMagic.Scene({
   triggerElement: animationSection,
   triggerHook: 0,
 })
-  .addIndicators()
   .setPin(animationSection)
   .addTo(controller);
 
 //LOGO ANIMATION
-const logoAnim = TweenMax.fromTo(bilderLogo, 3, { opacity: 1 }, { opacity: 0 });
+
+const timeline = new TimelineMax();
+
+const logoAnim2 = TweenMax.fromTo(
+  bilderLogo,
+  { opacity: 1 },
+  { opacity: 0, duration: 2 }
+);
+
+const headlineAnim = TweenMax.fromTo(
+  textContainer,
+  { y: innerHeight / 2, opacity: 0 },
+  { y: 0, opacity: 1, duration: 2, delay: 1 }
+);
+
+timeline.add(logoAnim2).add(headlineAnim);
+timeline.progress(0.3);
 
 let scene2 = new ScrollMagic.Scene({
-  duration: sceneHeight,
+  duration: sceneHeight - innerHeight / 4,
   triggerElement: animationSection,
   triggerHook: 0,
+  offset: innerHeight / 4,
 })
-  .setTween(logoAnim)
+  .setTween(timeline)
   .addTo(controller);
 
 //Video Animation
@@ -69,22 +88,27 @@ let scene2 = new ScrollMagic.Scene({
 const updateImage = (index) => {
   img.src = currentFrame(index);
   drawToCanvas(img);
-
-  // window.addEventListener("resize", function () {
-  //   setTimeout(() => {
-  //     canvas.width = window.innerWidth;
-  //     canvas.height = window.innerHeight;
-  //     drawToCanvas(img);
-  //   }, 500);
-  // });
 };
 
-scene.on("update", (e) => {
-  progress = e.scrollPos / (sceneHeight * 0.9);
-  //console.log("progress", progress);
-});
+function resizeListener() {
+  innerWidth = window.innerWidth;
+  innerHeight = window.innerHeight;
+  setTimeout(() => {
+    canvas.width = innerWidth;
+    canvas.height = innerHeight;
+    drawToCanvas(img);
+  }, 200);
+}
 
 function initAnimation() {
+  resizeListener();
+  window.addEventListener("resize", resizeListener);
+
+  scene.on("update", (e) => {
+    progress = e.scrollPos / (sceneHeight * 0.9);
+    console.log("progress", progress);
+  });
+
   animationInterval = setInterval(() => {
     delay += (progress - delay) * 0.05;
     //console.log("delay", delay);
@@ -96,15 +120,26 @@ function initAnimation() {
   }, 33.3);
 }
 
+function resetScene() {
+  window.removeEventListener("resize", resizeListener);
+
+  scene.off("update");
+
+  clearInterval(animationInterval);
+  delay = 1;
+}
+
 // Stop interval if animation is out of viewport
 
 let callback = (entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
+      resizeListener();
       initAnimation();
+      animationSection.classList.add("inview");
     } else {
-      clearInterval(animationInterval);
-      delay = 1;
+      resetScene();
+      animationSection.classList.remove("inview");
     }
   });
 };
@@ -116,42 +151,51 @@ let animationRunObserver = new IntersectionObserver(callback, {
 
 animationRunObserver.observe(animationSection);
 
+document.addEventListener("DOMContentLoaded", function (event) {
+  window.scroll(0, 0);
+  setTimeout(() => {
+    window.scrollTo({
+      top: innerHeight / 4,
+      behavior: "smooth",
+    });
+  }, 200);
+});
 // window.scroll(0, 0);
 // // scroll down a bit
 // document.addEventListener("DOMContentLoaded", function (event) {
 //   window.scrollTo;
 //   setTimeout(() => {
-//     scrollTo(document.body, 300, 500);
+//     scrollTo(document.body, window.innerHeight / 3, 200);
 //   }, 200);
 // });
 
-function scrollTo(element, to, duration) {
-  var start = element.scrollTop,
-    change = to - start,
-    currentTime = 0,
-    increment = 20;
+// function scrollTo(element, to, duration) {
+//   var start = element.scrollTop,
+//     change = to - start,
+//     currentTime = 0,
+//     increment = 20;
 
-  var animateScroll = function () {
-    currentTime += increment;
-    var val = Math.easeInOutQuad(currentTime, start, change, duration);
-    element.scrollTop = val;
-    if (currentTime < duration) {
-      setTimeout(animateScroll, increment);
-    }
-  };
-  animateScroll();
-}
+//   var animateScroll = function () {
+//     currentTime += increment;
+//     var val = Math.easeInOutQuad(currentTime, start, change, duration);
+//     element.scrollTop = val;
+//     if (currentTime < duration) {
+//       setTimeout(animateScroll, increment);
+//     }
+//   };
+//   animateScroll();
+// }
 
-//t = current time
-//b = start value
-//c = change in value
-//d = duration
-Math.easeInOutQuad = function (t, b, c, d) {
-  t /= d / 2;
-  if (t < 1) return (c / 2) * t * t + b;
-  t--;
-  return (-c / 2) * (t * (t - 2) - 1) + b;
-};
+// //t = current time
+// //b = start value
+// //c = change in value
+// //d = duration
+// Math.easeInOutQuad = function (t, b, c, d) {
+//   t /= d / 2;
+//   if (t < 1) return (c / 2) * t * t + b;
+//   t--;
+//   return (-c / 2) * (t * (t - 2) - 1) + b;
+// };
 
 // TOGGLE PROBLEM CARDS
 
