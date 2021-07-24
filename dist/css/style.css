@@ -179,13 +179,15 @@ p { font-size: 14px; color: #c6c6c6; line-height: 120%; margin-bottom: 16px; }
 
 .navbar .color-border .border-part:nth-child(5) { background: #003e8e; }
 
-.menu-mobile { position: fixed; top: 70px; left: 0; width: 100%; height: calc(100% - 70px); background: rgba(0, 0, 0, 0.8); backdrop-filter: blur(30px); display: flex; justify-content: center; align-items: center; z-index: 1; }
+.menu-mobile { position: fixed; top: 70px; left: 0; width: 100%; height: calc(100% - 70px); background: rgba(0, 0, 0, 0.8); backdrop-filter: blur(30px); display: flex; justify-content: center; align-items: center; z-index: 999999; }
 
 .menu-mobile.hidden { display: none; }
 
 .menu-mobile .close { width: 25px; margin-top: 35px; opacity: 0.7; }
 
 .menu-mobile .inner { display: flex; flex-direction: column; align-items: center; margin: 0 30px; }
+
+.menu-mobile .inner .button { font-size: 20px !important; padding: 12px 24px; }
 
 .menu-mobile .inner .link { font-size: 28px; margin-bottom: 40px; text-decoration: none; color: #fff; }
 
@@ -504,6 +506,154 @@ p { font-size: 14px; color: #c6c6c6; line-height: 120%; margin-bottom: 16px; }
 .technology section.bilderbox h1 em { color: #ffbb1c; }
 
 .technology section.bilderbox .animation-area canvas { width: 100%; }
+
+@font-face { font-family: "Stolzl Regular"; src: url("/asstes/fonts/Stolzl-Regular.ttf") format("ttf"); }
+
+@font-face { font-family: "Stolzl Medium"; src: url("/asstes/fonts/Stolzl-Medium.ttf") format("ttf"); }
+
+@font-face { font-family: "Stolzl Bold"; src: url("/asstes/fonts/Stolzl-Bold.ttf") format("ttf"); }
+
+.buy-now section.buy-section { padding-top: 100px; }
+
+.buy-now section.buy-section .inner { display: flex; flex-direction: column; width: calc(100% - 40px); }
+
+@media (min-width: 600px) { .buy-now section.buy-section .inner { width: calc(100% - 70px); } }
+
+@media (min-width: 1000px) { .buy-now section.buy-section .inner { width: calc(100% - 100px); } }
+
+@media screen and (min-width: 800px) { .buy-now section.buy-section .inner { flex-direction: row; } }
+
+.buy-now section.buy-section .inner > .left { position: relative; }
+
+@media screen and (min-width: 800px) { .buy-now section.buy-section .inner > .left { width: 55%; position: sticky; position: -webkit-sticky; top: 220px; margin-top: 120px; margin-right: 5%; height: fit-content; } }
+
+.buy-now section.buy-section .inner > .left .swiper-button-next, .buy-now section.buy-section .inner > .left .swiper-button-prev { bottom: 0; top: initial; width: 30px; transform: scale(0.75); transform-origin: bottom; color: #5f5f5f; }
+
+.buy-now section.buy-section .inner > .left .swiper-button-next { right: 30%; }
+
+.buy-now section.buy-section .inner > .left .swiper-button-prev { left: 30%; }
+
+.buy-now section.buy-section .inner > .left .swiper-pagination-bullet { background: #c6c6c6; margin-bottom: 3px; }
+
+.buy-now section.buy-section .inner > .left .swiper-pagination-bullet-active { background: #c6c6c6; }
+
+.buy-now section.buy-section .inner > .left img { width: 100%; }
+
+@media screen and (min-width: 800px) { .buy-now section.buy-section .inner > .right { width: 40%; } }
+
+.buy-now section.buy-section .inner > .right .buy-unit { padding: 80px 0; border-bottom: 1px solid #5f5f5f; }
+
+.buy-now section.buy-section .inner > .right .buy-unit h4 { margin-bottom: 20px; }
+
+.buy-now section.buy-section .inner > .right .buy-unit p { font-size: 18px; }
+
+@media (max-width: 599px) { .buy-now section.buy-section .inner > .right .headlines { padding-top: 40px; } }
+
+.buy-now section.buy-section .inner > .right .option { padding-bottom: 10px; }
+
+.buy-now section.buy-section .inner > .right .option .option-wrapper { margin-bottom: 65px; }
+
+.buy-now section.buy-section .inner > .right .option .option-wrapper .option-item { margin-top: 30px; display: flex; flex-direction: row; justify-content: space-between; padding: 24px; color: #fff; border-radius: 12px; box-shadow: inset 0 0 0 2px #5f5f5f; background: #181413; transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out; cursor: pointer; }
+
+.buy-now section.buy-section .inner > .right .option .option-wrapper .option-item:hover { box-shadow: inset 0 0 0 2px #fff; }
+
+.buy-now section.buy-section .inner > .right .option .option-wrapper .option-item.active { background: #fff; color: #181413; box-shadow: inset 0 0 0 5px #1fbcff; }
+
+.buy-now section.buy-section .inner > .right .option .option-wrapper .option-item .left { max-width: 200px; margin-right: 20px; }
+
+.buy-now section.buy-section .inner > .right .option .option-wrapper .option-item .left .option { font-size: 24px; margin-bottom: 5px; }
+
+@media (max-width: 599px) { .buy-now section.buy-section .inner > .right .option .option-wrapper .option-item .left .option { font-size: 20px; } }
+
+.buy-now section.buy-section .inner > .right .option .option-wrapper .option-item .left .desc { font-size: 16px; color: #5f5f5f; }
+
+@media (max-width: 599px) { .buy-now section.buy-section .inner > .right .option .option-wrapper .option-item .left .desc { font-size: 14px; } }
+
+.buy-now section.buy-section .inner > .right .option .option-wrapper .option-item .right { font-size: 30px; }
+
+@media (max-width: 599px) { .buy-now section.buy-section .inner > .right .option .option-wrapper .option-item .right { font-size: 25px; } }
+
+.buy-now section.buy-section .inner > .right .option .asterisk { color: #5f5f5f; font-size: 14px; }
+
+.buy-now section.buy-section .inner > .right .color .option-wrapper { margin-top: 30px; display: flex; flex-direction: column; }
+
+@media (min-width: 600px) { .buy-now section.buy-section .inner > .right .color .option-wrapper { flex-direction: row; } }
+
+.buy-now section.buy-section .inner > .right .color .option-wrapper .option-item { display: flex; flex-direction: column; align-items: center; width: 100%; padding: 24px; color: #fff; border-radius: 12px; box-shadow: inset 0 0 0 2px #5f5f5f; background: #181413; transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out, color 0.3s ease-in-out; cursor: pointer; text-align: center; }
+
+.buy-now section.buy-section .inner > .right .color .option-wrapper .option-item:first-child { margin-bottom: 30px; }
+
+@media (min-width: 600px) { .buy-now section.buy-section .inner > .right .color .option-wrapper .option-item:first-child { margin-bottom: 0; margin-right: 30px; } }
+
+.buy-now section.buy-section .inner > .right .color .option-wrapper .option-item:hover { box-shadow: inset 0 0 0 2px #fff; }
+
+.buy-now section.buy-section .inner > .right .color .option-wrapper .option-item.active { background: #fff; color: #181413; box-shadow: inset 0 0 0 5px #1fbcff; }
+
+.buy-now section.buy-section .inner > .right .color .option-wrapper .option-item .image-container img { width: 100%; max-width: 150px; }
+
+.buy-now section.buy-section .inner > .right .color .option-wrapper .option-item .name { font-size: 24px; margin-top: 16px; }
+
+.buy-now section.buy-section .inner > .right .last { border-bottom: none; }
+
+.buy-now section.buy-section .inner > .right .last .button { display: flex; align-items: center; justify-content: center; transition: opactiy 0.3s ease-in-out; }
+
+.buy-now section.buy-section .inner > .right .last .button.disabled { opacity: 0.7 !important; }
+
+.buy-now section.buy-section .inner > .right .last .button.disabled:hover { transform: scale(1); }
+
+.buy-now section.buy-section .inner > .right .last .button img { width: 24px; margin-right: 15px; }
+
+.buy-now section.buy-section .inner > .right .last .notice { opacity: 0; margin-top: 50px; background: #ffbb1c; padding: 20px 30px; color: #181413; border-radius: 15px; }
+
+.buy-now section.buy-section .inner > .right .last .notice .top { font-size: 24px; margin-bottom: 7px; }
+
+.buy-now section.buy-section .inner > .right .last .notice .bottom { font-size: 16px; opacity: 0.85; }
+
+.buy-now section.buy-section .inner > .right .last .notice .bottom a { color: #181413; }
+
+.buy-now section.devices { padding-top: 50px; }
+
+.buy-now section.devices .inner { display: flex; }
+
+@media screen and (max-width: 1140px) { .buy-now section.devices .inner { flex-direction: column; align-items: center; } }
+
+.buy-now section.devices .inner .unit { display: flex; width: 100%; justify-content: center; }
+
+@media (max-width: 599px) { .buy-now section.devices .inner .unit { flex-direction: column; align-items: center; } }
+
+.buy-now section.devices .inner .unit:first-child { margin-right: 50px; }
+
+@media screen and (max-width: 1140px) { .buy-now section.devices .inner .unit:first-child { margin-right: 0; margin-bottom: 50px; } }
+
+.buy-now section.devices .inner .device { width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: space-between; padding: 25px; background: #fff; border-radius: 20px; height: 280px; max-width: 300px; transition: transform 0.6s ease-in-out; }
+
+.buy-now section.devices .inner .device:hover { transform: scale(1.03); }
+
+.buy-now section.devices .inner .device:first-child { margin-right: 50px; }
+
+@media (max-width: 599px) { .buy-now section.devices .inner .device:first-child { margin-right: 0; margin-bottom: 50px; } }
+
+.buy-now section.devices .inner .device .image-container { width: 90%; height: 35%; }
+
+.buy-now section.devices .inner .device .image-container img { width: 100%; height: 100%; object-fit: contain; }
+
+.buy-now section.devices .inner .device .text { text-align: center; margin-top: 10px; }
+
+.buy-now section.devices .inner .device .text .name { font-size: 24px; margin-bottom: 2px; }
+
+.buy-now section.devices .inner .device .text .desc { font-size: 16px; margin-bottom: 24px; color: #5f5f5f; }
+
+.buy-now section.devices .inner .device .button { font-size: 20px; padding: 17px; width: 100%; }
+
+.buy-now section.hardware .inner .intro { text-align: center; display: flex; flex-direction: column; align-items: center; }
+
+.buy-now section.hardware .inner .intro h1 { max-width: 1030px; }
+
+.buy-now section.hardware .inner .intro h3 { max-width: 890px; }
+
+.buy-now section.bilderbox h1 em { color: #ffbb1c; }
+
+.buy-now section.bilderbox .animation-area canvas { width: 100%; }
 
 @font-face { font-family: "Stolzl Regular"; src: url("/asstes/fonts/Stolzl-Regular.ttf") format("ttf"); }
 

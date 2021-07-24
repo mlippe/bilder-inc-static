@@ -1,0 +1,390 @@
+@import "_variables.scss";
+@import "mixins";
+
+.buy-now {
+  section.buy-section {
+    padding-top: 100px;
+
+    .inner {
+      display: flex;
+      flex-direction: column;
+      width: calc(100% - 40px);
+
+      @include tablet {
+        width: calc(100% - 70px);
+      }
+
+      @include desktop {
+        width: calc(100% - 100px);
+      }
+
+      @media screen and (min-width: 800px) {
+        flex-direction: row;
+      }
+
+      > .left {
+        position: relative;
+        @media screen and (min-width: 800px) {
+          width: 55%;
+          position: sticky;
+          position: -webkit-sticky;
+          top: 220px;
+          margin-top: 120px;
+          margin-right: 5%;
+          height: fit-content;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+          bottom: 0;
+          top: initial;
+          width: 30px;
+          transform: scale(0.75);
+          transform-origin: bottom;
+          color: $medium-grey;
+        }
+
+        .swiper-button-next {
+          right: 30%;
+        }
+        .swiper-button-prev {
+          left: 30%;
+        }
+
+        .swiper-pagination-bullet {
+          background: $light-grey;
+          margin-bottom: 3px;
+        }
+
+        .swiper-pagination-bullet-active {
+          background: $light-grey;
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+
+      > .right {
+        @media screen and (min-width: 800px) {
+          width: 40%;
+        }
+
+        .buy-unit {
+          padding: 80px 0;
+          border-bottom: 1px solid $medium-grey;
+
+          h4 {
+            margin-bottom: 20px;
+          }
+
+          p {
+            font-size: 18px;
+          }
+        }
+
+        .headlines {
+          @include phone-only {
+            padding-top: 40px;
+          }
+        }
+
+        .option {
+          padding-bottom: 10px;
+
+          .option-wrapper {
+            margin-bottom: 65px;
+
+            .option-item {
+              margin-top: 30px;
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              padding: 24px;
+              color: $white;
+              border-radius: 12px;
+              box-shadow: inset 0 0 0 2px $medium-grey;
+              background: $chocolate;
+              transition: background 0.3s ease-in-out,
+                box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+              cursor: pointer;
+
+              &:hover {
+                box-shadow: inset 0 0 0 2px $white;
+              }
+
+              &.active {
+                background: $white;
+                color: $chocolate;
+                box-shadow: inset 0 0 0 5px $lightblue;
+              }
+
+              .left {
+                max-width: 200px;
+                margin-right: 20px;
+
+                .option {
+                  font-size: 24px;
+                  margin-bottom: 5px;
+
+                  @include phone-only {
+                    font-size: 20px;
+                  }
+                }
+
+                .desc {
+                  font-size: 16px;
+                  color: $medium-grey;
+
+                  @include phone-only {
+                    font-size: 14px;
+                  }
+                }
+              }
+              .right {
+                font-size: 30px;
+                @include phone-only {
+                  font-size: 25px;
+                }
+              }
+            }
+          }
+
+          .asterisk {
+            color: $medium-grey;
+            font-size: 14px;
+          }
+        }
+
+        .color {
+          .option-wrapper {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+
+            @include tablet {
+              flex-direction: row;
+            }
+
+            .option-item {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              width: 100%;
+              padding: 24px;
+              color: $white;
+              border-radius: 12px;
+              box-shadow: inset 0 0 0 2px $medium-grey;
+              background: $chocolate;
+              transition: background 0.3s ease-in-out,
+                box-shadow 0.3s ease-in-out, color 0.3s ease-in-out;
+              cursor: pointer;
+              text-align: center;
+
+              &:first-child {
+                margin-bottom: 30px;
+
+                @include tablet {
+                  margin-bottom: 0;
+                  margin-right: 30px;
+                }
+              }
+
+              &:hover {
+                box-shadow: inset 0 0 0 2px $white;
+              }
+
+              &.active {
+                background: $white;
+                color: $chocolate;
+                box-shadow: inset 0 0 0 5px $lightblue;
+              }
+
+              .image-container {
+                img {
+                  width: 100%;
+                  max-width: 150px;
+                }
+              }
+              .name {
+                font-size: 24px;
+                margin-top: 16px;
+              }
+            }
+          }
+        }
+
+        .last {
+          border-bottom: none;
+          .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opactiy 0.3s ease-in-out;
+
+            &.disabled {
+              opacity: 0.7 !important;
+
+              &:hover {
+                transform: scale(1);
+              }
+            }
+
+            img {
+              width: 24px;
+              margin-right: 15px;
+            }
+          }
+
+          .notice {
+            opacity: 0;
+            margin-top: 50px;
+            background: $orange;
+            padding: 20px 30px;
+            color: $chocolate;
+            border-radius: 15px;
+
+            .top {
+              font-size: 24px;
+              margin-bottom: 7px;
+            }
+
+            .bottom {
+              font-size: 16px;
+              opacity: 0.85;
+
+              a {
+                color: $chocolate;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  section.devices {
+    padding-top: 50px;
+    .inner {
+      display: flex;
+
+      @media screen and (max-width: 1140px) {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .unit {
+        display: flex;
+
+        width: 100%;
+        justify-content: center;
+
+        @include phone-only {
+          flex-direction: column;
+          align-items: center;
+        }
+
+        &:first-child {
+          margin-right: 50px;
+
+          @media screen and (max-width: 1140px) {
+            margin-right: 0;
+            margin-bottom: 50px;
+          }
+        }
+      }
+
+      .device {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 25px;
+        background: $white;
+        border-radius: 20px;
+        height: 280px;
+        max-width: 300px;
+        transition: transform 0.6s ease-in-out;
+
+        &:hover {
+          transform: scale(1.03);
+        }
+
+        &:first-child {
+          margin-right: 50px;
+
+          @include phone-only {
+            margin-right: 0;
+            margin-bottom: 50px;
+          }
+        }
+
+        .image-container {
+          width: 90%;
+          height: 35%;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+
+        .text {
+          text-align: center;
+          margin-top: 10px;
+
+          .name {
+            font-size: 24px;
+            margin-bottom: 2px;
+          }
+
+          .desc {
+            font-size: 16px;
+            margin-bottom: 24px;
+            color: $medium-grey;
+          }
+        }
+        .button {
+          font-size: 20px;
+          padding: 17px;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  section.hardware {
+    .inner {
+      .intro {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h1 {
+          max-width: 1030px;
+        }
+
+        h3 {
+          max-width: 890px;
+        }
+      }
+    }
+  }
+
+  section.bilderbox {
+    h1 {
+      em {
+        color: $orange;
+      }
+    }
+
+    .animation-area {
+      canvas {
+        width: 100%;
+      }
+    }
+  }
+}

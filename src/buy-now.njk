@@ -1,0 +1,137 @@
+{% import "./template-parts/_footer.njk" as footer %}
+{% import "./template-parts/_floating-content.njk" as floatingContent %}
+{% import "./template-parts/_navbar.njk" as navBar %}
+{% import "./template-parts/_head.njk" as head %}
+<html lang="en">
+  <head>
+    {{ head.el(false) }} <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <title>Buy Now - Bilder Inc</title>
+  </head>
+  <body class="buy-now">
+    {{ navBar.el(false) }}
+    <section class="buy-section">
+      <div class="layout">
+        <div class="inner grid-max">
+          <div class="left">
+            <div
+              class="swiper-container">
+              <!-- Additional required wrapper -->
+              <div
+                class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <img src="../assets/img/buy-now/perspective.jpg"/>
+                </div>
+                <div class="swiper-slide">
+                  <img src="../assets/img/buy-now/frontview.png"/>
+                </div>
+                <div class="swiper-slide">
+                  <img src="../assets/img/buy-now/sideview.png"/>
+                </div>
+                <div class="swiper-slide">
+                  <img src="../assets/img/buy-now/backview.png"/>
+                </div>
+              </div>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+            <div class="controls"></div>
+          </div>
+          <div class="right">
+            <div class="headlines buy-unit">
+              <h1>Buy your BilderBox</h1>
+              <h4>BilderBox is the central home for all of your photos. Its easy to set up and a joy to use!</h4>
+            </div>
+            <div class="option buy-unit">
+              <h4>Choose your option</h4>
+              <p>Your BilderBox includes a BilderBook, a BilderBeam and a BilderScan</p>
+              <div class="option-wrapper">
+                <div class="option-item active">
+                  <div class="left">
+                    <div class="option">BilderBox 8TB</div>
+                    <div class="desc">Enough storage for<br>800 000 photos*</div>
+                  </div>
+                  <div class="right">
+                    399€
+                  </div>
+                </div>
+                <div class="option-item">
+                  <div class="left">
+                    <div class="option">BilderBox 16TB</div>
+                    <div class="desc">Enough storage for<br>1 600 000 photos*</div>
+                  </div>
+                  <div class="right">
+                    549€
+                  </div>
+                </div>
+              </div>
+              <div class="asterisk">* assuming an average file size of 10MB / photo</div>
+            </div>
+            <div class="color buy-unit">
+              <h4>Choose your color</h4>
+              <p>You can decide between one of our four handpicked hardware finishes</p>
+              <div class="option-wrapper">
+                <div class="option-item active">
+                  <div class="image-container">
+                    <img src="../assets/img/buy-now/black.png"/>
+                  </div>
+                  <div class="name">
+                    Onyx Black
+                  </div>
+                </div>
+                <div class="option-item">
+                  <div class="image-container">
+                    <img src="../assets/img/buy-now/silver.png"/>
+                  </div>
+                  <div class="name">
+                    Royal Silver
+                  </div>
+                </div>
+              </div>
+              <div class="option-wrapper">
+                <div class="option-item">
+                  <div class="image-container">
+                    <img src="../assets/img/buy-now/gold.png"/>
+                  </div>
+                  <div class="name">
+                    Red Copper
+                  </div>
+                </div>
+                <div class="option-item">
+                  <div class="image-container">
+                    <img src="../assets/img/buy-now/teal.png"/>
+                  </div>
+                  <div class="name">
+                    Magic Mint
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="last buy-unit">
+              <div class="button button-large"><img src="../assets/img/buy-now/shopping.svg"/>
+                <span>Add to Cart</span>
+              </div>
+              <div class="notice">
+                <div class="top">Currently unavailable!</div>
+                <div class="bottom">Bilder Inc is a concept that was developed in the course of a Bachelors Thesis. It is thus not a
+                  real product.
+                  <a href="/about">Learn more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="devices"></section>
+    {{ footer.el(false) }}
+    {% include "./template-parts/_animation-scripts.njk" %}
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/nav.js"></script>
+    <script src="../js/buy-now.js"></script>
+  </body>
+</html>
