@@ -1,0 +1,178 @@
+{% import "./template-parts/_footer.njk" as footer %}
+{% import "./template-parts/_problem-cards.njk" as problemCards %}
+{% import "./template-parts/_navbar.njk" as navBar %}
+{% import "./template-parts/_offer-section.njk" as offerSection %}
+{% import "./template-parts/_head.njk" as head %}
+<html lang="en">
+  <head>
+    {{ head.el(false) }}
+    <title>About - Bilder Inc</title>
+  </head>
+  <body class="about">
+    {{ navBar.el(false) }}
+    <section class="intro">
+      <div class="layout">
+        <div class="inner grid-max">
+          <div class="group first">
+            <div class="left">
+              <h1>About<br>Bilder Inc.</h1>
+              <h5>Bilder Inc. is a concept I developed in the course of my Bachelors Thesis.<br><br> This thesis was the final project
+                for my industrial design program at Hochschule München.</h5>
+            </div>
+            <div class="right">
+              <div class="img-col">
+                <img src="../assets/img/about/img1.jpg"/>
+                <img src="../assets/img/about/img2.jpg"/>
+              </div>
+              <div class="img-col">
+                <img src="../assets/img/about/img3.jpg"/>
+                <img src="../assets/img/about/img4.jpg"/>
+              </div>
+            </div>git status
+          </div>
+          <div class="group second">
+            <div class="left">
+              <img src="../assets/img/about/placeholder.jpg"/>
+              <div class="about-description-item me">
+                <h4>About me</h4>
+                <p>
+                  My name is Manuel Lippmann. I am a designer, photographer and tinkerer based in munich.<br><br>Thanks for checking out
+                  my work! Contact me if you want to have a chat or ask me something:
+                </p>
+                <div class="icons">
+                  <a href="https://www.instagram.com/lippe.mann"><img src="../assets/img/about/ig.svg"/>
+                  </a>
+                  <a href="http://www.lippe-mann.de"><img src="../assets/img/about/web.svg"/>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="right">
+              <div class="about-description-item">
+                <h4>Why</h4>
+                <p>
+                  The state of personal photography today is in an interesting situation: technology has evolved rapidly in the last two
+                  decades.<br><br>
+                  But still personal photo collections tend to be rather cluttered, which makes it complicated to find and access our
+                  photos.<br><br>This is really sad, because there are so many memories getting lost in digital and physical space.
+                </p>
+              </div>
+              <div class="about-description-item">
+                <h4>What</h4>
+                <p>
+                  I wanted to give personal photography a new home, a space that lives up to the value our photos have to us.<br><br> This
+                  space mainly focuses on a centralised storage for all your photos. Furthermore it promotes the actual consumption of the
+                  images, to bring people back to all those good moments they had in their lifes.<br><br>
+                  And of course, in todays connected society, it elevates the sharing of photos with your friends and family.
+                </p>
+              </div>
+              <div class="about-description-item">
+                <h4>How</h4>
+                <p>
+                  Bilder Inc. is the ecosystem for personal photos.<br><br>
+                  BilderBox is the central space for your photos as well as the
+                  Bilder system: it houses all companion devices as well as powerful hardware to run advanced software functionalities.<br><br>
+                  BilderAI automatically sorts and organizes your photo library. BilderApps make your photo collection accessible
+                  anywhere, on all major plattforms.<br><br>
+                  BilderBook allows you to flip through your memories just like it used to be in the good old times.<br><br> BilderBeam provides a large canvas to view photos in a picture night with your friends and loved ones.<br><br>
+                  BilderScan is a super fast and easy way to bring your paper photos into the digital space. Quickly scan prints or
+                  negatives with the dedicated scanner units.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="problem">
+      {{ problemCards.el(false,'How Bilder Inc. solves 3 big problems of personal photography today' ) }}
+    </section>
+    <section class="magazin">
+      <div class="image-container">
+        <img src="../assets/img/about/magazin.jpg"/>
+      </div>
+      <div class="layout">
+        <div class="inner grid-max">
+          <div class="wrapper">
+            <h3>Want to know the facts behind Bilder Inc?</h3>
+            <a
+              href="../assets/202107_BA_Erinnerungsfotos_im_digitalen_Zeitalter-Lippmann.pdf"
+              download=""
+              class="button button-large">Download my research paper*</a>
+            <div class="notice">* Available in german only at the moment</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="research">
+      <div class="layout">
+        <div class="inner grid-max">
+          <div class="intro">
+            <h1>Research</h1>
+            <p>Some selected results of my research I have done for this project. First I conducted an online survey about personal
+              photography with a total of 115 participants. Secondly I interviewed 18 persons from different age groups, cultures and
+              genders about this topic.<br><br> The graphs shown here are an aggregation of this data.</p>
+          </div>
+          <div class="graph-container">
+            <div class="row">
+              <div class="graph">
+                <div class="text">
+                  How often do you share snapshots with friends and family?
+                </div>
+                <img src="../assets/img/about/rs1.jpg">
+              </div>
+              <div class="graph">
+                <div class="text">
+                  What do you think of automated image collections curated by AI?
+                </div>
+                <img src="../assets/img/about/rs2.jpg">
+              </div>
+            </div>
+            <div class="row">
+              <div class="graph">
+                <div class="text">
+                  Whats your favourite way to view your photos?
+                </div>
+                <img src="../assets/img/about/rs3.jpg">
+              </div>
+              <div class="graph">
+                <div class="text">
+                  Do you still have photos on paper or as negatives?
+                </div>
+                <img src="../assets/img/about/rs4.jpg">
+              </div>
+            </div>
+            <div class="row">
+              <div class="graph">
+                <div class="text">
+                  How important are photos on paper for you?
+                </div>
+                <img src="../assets/img/about/rs5.jpg">
+              </div>
+              <div class="graph">
+                <div class="text">
+                  What do you think of automated image collections curated by AI?
+                </div>
+                <img src="../assets/img/about/rs6.jpg">
+              </div>
+            </div>
+            <div class="gradient"></div>
+          </div>
+          <div class="download-wrap">
+            <h3>Interested in more statistics about personal photography?</h3>
+            <a
+              href="../assets/202107_BA_Erinnerungsfotos_im_digitalen_Zeitalter-Research_Ergebnisse-Lippmann.pdf"
+              download=""
+              class="button button-large">Download datasheet*</a>
+            <div class="notice">* Available in german only at the moment</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {{ offerSection.el(false) }}
+    {{ footer.el(false) }}
+    {% include "./template-parts/_animation-scripts.njk" %}
+    <script src="../js/main.js"></script>
+    <script src="../js/nav.js"></script>
+  </body>
+</html></body></html></body></html>

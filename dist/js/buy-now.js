@@ -34,7 +34,12 @@ btn.addEventListener("click", function () {
     btn.classList.add("disabled");
 
     setTimeout(() => {
-      TweenLite.fromTo(notice, 1, { opacity: 0, y: 20 }, { opacity: 1, y: 0 });
+      TweenLite.fromTo(
+        notice,
+        1,
+        { opacity: 0, y: -60, maxHeight: 0, display: "none" },
+        { opacity: 1, y: 0, maxHeight: 1000, display: "block" }
+      );
     }, 500);
   }
 });

@@ -4,9 +4,9 @@
 section.offer {
   position: relative;
   padding: 0;
-  margin: 150px 0 250px;
+  margin: 100px 0;
 
-  @include tablet {
+  @include desktop {
     margin: 200px 0 350px;
   }
 

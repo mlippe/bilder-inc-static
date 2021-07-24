@@ -4,9 +4,9 @@
 
 @font-face { font-family: "Stolzl Bold"; src: url("/asstes/fonts/Stolzl-Bold.ttf") format("ttf"); }
 
-section.offer { position: relative; padding: 0; margin: 150px 0 250px; }
+section.offer { position: relative; padding: 0; margin: 100px 0; }
 
-@media (min-width: 600px) { section.offer { margin: 200px 0 350px; } }
+@media (min-width: 1000px) { section.offer { margin: 200px 0 350px; } }
 
 section.offer > img { width: 75%; margin-bottom: -150px; }
 

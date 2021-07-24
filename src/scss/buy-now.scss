@@ -248,6 +248,10 @@
             color: $chocolate;
             border-radius: 15px;
 
+            @media screen and (max-width: 800px) {
+              display: none;
+            }
+
             .top {
               font-size: 24px;
               margin-bottom: 7px;
@@ -268,10 +272,16 @@
   }
 
   section.details {
+    @media screen and (max-width: 1000px) {
+      padding-top: 0;
+      padding-bottom: 50px;
+    }
+
     .image-container {
       margin-top: 60px;
       display: flex;
       flex-direction: column;
+      overflow: hidden;
 
       @include desktop {
         flex-direction: row;
@@ -311,7 +321,7 @@
           .size-container {
             height: 62%;
             top: 13%;
-            right: -2%;
+            right: -10%;
             flex-direction: row;
             justify-content: center;
 
@@ -336,8 +346,10 @@
             }
 
             .number {
-              margin-left: -15px;
               transform: rotate(90deg);
+              width: 50%;
+              margin-top: -25px;
+              margin-right: 7px;
             }
           }
         }
@@ -390,10 +402,10 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      margin-top: 100px;
 
       @include desktop {
         flex-direction: row;
+        margin-top: 100px;
       }
 
       .details-unit {
@@ -542,6 +554,7 @@
   }
 
   section.whats-in-the-box {
+    padding-bottom: 0;
     .row {
       display: flex;
       justify-content: space-between;

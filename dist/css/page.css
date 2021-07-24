@@ -27,7 +27,7 @@ section { padding: 125px 0; }
 @media (min-width: 600px) { section { padding: 220px 0; } }
 
 /* ---- FONTS ----- */
-h1, h2, h3, h4, h5, p { color: #fff; font-family: stolzl, "Stolzl Medium", "Helvetica", sans-serif; font-weight: 500; font-style: normal; letter-spacing: -0.016em; margin: 0; padding: 0; }
+h1, h2, h3, h4, h5, p { color: #fff; font-family: stolzl, "Stolzl Medium", "Helvetica", sans-serif; font-weight: 500; font-style: normal; letter-spacing: -0.016em; margin: 0; padding: 0; line-height: 120%; }
 
 h1 { font-size: 50px; margin-bottom: 30px; }
 
@@ -49,23 +49,15 @@ h3 { font-size: 25px; }
 
 @media (min-width: 1000px) { h3 { font-size: 42px; } }
 
-h4 { font-size: 20px; }
-
-@media (min-width: 600px) { h4 { font-size: 28px; } }
+h4 { font-size: 28px; }
 
 @media (min-width: 1000px) { h4 { font-size: 32px; } }
 
-h5 { font-size: 18px; line-height: 120%; margin-bottom: 18px; }
+h5 { font-size: 25px; margin-bottom: 24px; }
 
-@media (min-width: 600px) { h5 { font-size: 20px; margin-bottom: 20px; } }
+p { font-size: 20px; color: #c6c6c6; line-height: 130%; margin-bottom: 20px; }
 
-@media (min-width: 1000px) { h5 { font-size: 25px; margin-bottom: 24px; } }
-
-p { font-size: 14px; color: #c6c6c6; line-height: 120%; margin-bottom: 16px; }
-
-@media (min-width: 600px) { p { font-size: 16px; margin-bottom: 20px; } }
-
-@media (min-width: 600px) { p { font-size: 20px; margin-bottom: 24px; } }
+@media (min-width: 600px) { p { line-height: 120%; font-size: 20px; margin-bottom: 24px; } }
 
 /* --- BUTTON ---*/
 .button { display: inline-block; color: #fff !important; opacity: 1 !important; border-radius: 14px; background: #1fbcff; text-decoration: none; transition: transform 0.3s ease-in-out !important; box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.28); cursor: pointer; text-align: center; }

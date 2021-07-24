@@ -1,0 +1,321 @@
+@import "_variables.scss";
+@import "mixins";
+
+.about {
+  section.intro {
+    padding-bottom: 0;
+
+    .group {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include desktop {
+        flex-direction: row;
+      }
+
+      .left {
+        width: 100%;
+        margin-bottom: 40px;
+
+        @include desktop {
+          width: 45%;
+          margin-right: 40px;
+          margin-bottom: 0;
+        }
+      }
+
+      .right {
+        width: 100%;
+
+        @include desktop {
+          width: 45%;
+        }
+      }
+    }
+
+    .first {
+      .right {
+        display: flex;
+
+        .img-col {
+          img {
+            width: 100%;
+            border-radius: 26px;
+
+            &:nth-child(2) {
+              margin-top: 20px;
+            }
+          }
+
+          &:last-child {
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+
+    .second {
+      margin-top: 70px;
+      flex-direction: column-reverse;
+
+      @include desktop {
+        margin-top: 120px;
+        flex-direction: row;
+      }
+
+      .left {
+        > img {
+          border-radius: 26px;
+          width: 100%;
+          margin-bottom: 50px;
+          max-width: 500px;
+        }
+
+        .me {
+          .icons {
+            a {
+              margin-right: 30px;
+            }
+          }
+        }
+      }
+
+      .about-description-item {
+        max-width: 650px;
+        margin-bottom: 50px;
+
+        h4 {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+
+  section.problem {
+    padding-top: 120px;
+
+    h2 {
+      @include tablet {
+        text-align: center;
+      }
+    }
+  }
+
+  section.magazin {
+    padding: 0;
+    position: relative;
+
+    @include desktop {
+      height: 750px;
+    }
+
+    .layout {
+      position: relative;
+      align-items: flex-end;
+
+      @include desktop {
+        height: 100%;
+        text-shadow: 0 0 40px #000;
+      }
+
+      .inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin-bottom: 50px;
+
+        .wrapper {
+          max-width: 550px;
+          margin-top: -40px;
+          text-align: center;
+
+          @include tablet {
+            margin-top: -80px;
+            text-align: left;
+          }
+
+          @include desktop {
+            margin-top: 0;
+            text-align: left;
+          }
+
+          .button {
+            margin: 30px 0 12px;
+          }
+
+          .notice {
+            color: $white;
+            font-size: 12px;
+            text-align: center;
+
+            @include tablet {
+              text-align: left;
+            }
+
+            @include desktop {
+              text-align: right;
+            }
+          }
+        }
+      }
+    }
+
+    .image-container {
+      position: relative;
+
+      @include desktop {
+        position: absolute;
+        object-fit: cover;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 15vh;
+        background: linear-gradient(0deg, #181413, #18141300);
+      }
+
+      @include desktop {
+        &:after {
+          display: none;
+        }
+      }
+
+      img {
+        width: 100%;
+
+        @include desktop {
+          height: 70vh;
+          object-fit: cover;
+          object-position: left;
+        }
+      }
+    }
+
+    h2 {
+      @include tablet {
+        text-align: center;
+      }
+    }
+  }
+
+  section.research {
+    @include desktop {
+      padding-top: 350px;
+    }
+
+    .inner {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .intro {
+      display: flex;
+      flex-direction: column;
+
+      @include desktop {
+        flex-direction: row;
+      }
+
+      p {
+        margin-top: 30px;
+
+        @include desktop {
+          margin-left: 130px;
+        }
+      }
+
+      margin-bottom: 117px;
+    }
+
+    .graph-container {
+      position: relative;
+
+      .row {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 40px;
+        align-items: center;
+
+        @include desktop {
+          flex-direction: row;
+        }
+
+        .graph {
+          width: 100%;
+          padding: 40px;
+          background: #f1f1f1;
+          border-radius: 26px;
+
+          max-width: 600px;
+
+          &:first-child {
+            margin-bottom: 40px;
+
+            @include desktop {
+              margin-right: 40px;
+              margin-bottom: 0;
+            }
+          }
+
+          .text {
+            font-size: 25px;
+            margin-bottom: 15px;
+          }
+
+          img {
+            width: 100%;
+
+            @include desktop {
+              height: 350px;
+              object-fit: contain;
+            }
+          }
+        }
+      }
+
+      .gradient {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 40%;
+        background: linear-gradient(0deg, #181413 10%, #18141300);
+      }
+    }
+
+    .download-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 650px;
+      text-align: center;
+      margin-top: -300px;
+      position: relative;
+
+      @include desktop {
+        margin-top: -200px;
+      }
+
+      .button {
+        margin: 30px 0 12px;
+      }
+
+      .notice {
+        font-size: 12px;
+        color: $white;
+        opacity: 0.5;
+      }
+    }
+  }
+}

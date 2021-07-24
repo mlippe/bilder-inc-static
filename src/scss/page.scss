@@ -73,6 +73,7 @@ p {
   letter-spacing: -0.016em;
   margin: 0;
   padding: 0;
+  line-height: 120%;
 }
 
 h1 {
@@ -122,11 +123,7 @@ h3 {
 }
 
 h4 {
-  font-size: 20px;
-
-  @include tablet {
-    font-size: 28px;
-  }
+  font-size: 28px;
 
   @include desktop {
     font-size: 32px;
@@ -134,33 +131,18 @@ h4 {
 }
 
 h5 {
-  font-size: 18px;
-  line-height: 120%;
-  margin-bottom: 18px;
-
-  @include tablet {
-    font-size: 20px;
-    margin-bottom: 20px;
-  }
-
-  @include desktop {
-    font-size: 25px;
-    margin-bottom: 24px;
-  }
+  font-size: 25px;
+  margin-bottom: 24px;
 }
 
 p {
-  font-size: 14px;
+  font-size: 20px;
   color: $light-grey;
-  line-height: 120%;
-  margin-bottom: 16px;
+  line-height: 130%;
+  margin-bottom: 20px;
 
   @include tablet {
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-
-  @include tablet {
+    line-height: 120%;
     font-size: 20px;
     margin-bottom: 24px;
   }
