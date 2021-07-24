@@ -96,9 +96,7 @@
 
 .buy-now section.buy-section .inner > .right .last .button img { width: 24px; margin-right: 15px; }
 
-.buy-now section.buy-section .inner > .right .last .notice { opacity: 0; margin-top: 50px; background: #ffbb1c; padding: 20px 30px; color: #181413; border-radius: 15px; }
-
-@media screen and (max-width: 800px) { .buy-now section.buy-section .inner > .right .last .notice { display: none; } }
+.buy-now section.buy-section .inner > .right .last .notice { opacity: 0; margin-top: 50px; background: #ffbb1c; padding: 20px 30px; color: #181413; border-radius: 15px; display: none; }
 
 .buy-now section.buy-section .inner > .right .last .notice .top { font-size: 24px; margin-bottom: 7px; }
 

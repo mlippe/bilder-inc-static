@@ -247,10 +247,7 @@
             padding: 20px 30px;
             color: $chocolate;
             border-radius: 15px;
-
-            @media screen and (max-width: 800px) {
-              display: none;
-            }
+            display: none;
 
             .top {
               font-size: 24px;
