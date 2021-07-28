@@ -106,9 +106,11 @@
 
 .buy-now section.buy-section .inner > .right .last .notice .bottom a { color: #181413; }
 
+.buy-now section.details { overflow: hidden; }
+
 @media screen and (max-width: 1000px) { .buy-now section.details { padding-top: 0; padding-bottom: 50px; } }
 
-.buy-now section.details .image-container { margin-top: 60px; display: flex; flex-direction: column; overflow: hidden; }
+.buy-now section.details .image-container { margin-top: 60px; display: flex; flex-direction: column; }
 
 @media (min-width: 1000px) { .buy-now section.details .image-container { flex-direction: row; } }
 
@@ -146,7 +148,7 @@
 
 .buy-now section.details .details-container { display: flex; flex-direction: column; justify-content: space-between; align-items: center; }
 
-@media (min-width: 1000px) { .buy-now section.details .details-container { flex-direction: row; margin-top: 100px; } }
+@media (min-width: 1000px) { .buy-now section.details .details-container { flex-direction: row; align-items: flex-start; margin-top: 100px; } }
 
 .buy-now section.details .details-container .details-unit { width: 100%; max-width: 400px; margin-bottom: 80px; }
 

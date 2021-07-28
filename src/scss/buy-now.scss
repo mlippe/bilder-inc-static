@@ -294,6 +294,7 @@
   }
 
   section.details {
+    overflow: hidden;
     @media screen and (max-width: 1000px) {
       padding-top: 0;
       padding-bottom: 50px;
@@ -303,7 +304,6 @@
       margin-top: 60px;
       display: flex;
       flex-direction: column;
-      overflow: hidden;
 
       @include desktop {
         flex-direction: row;
@@ -427,6 +427,7 @@
 
       @include desktop {
         flex-direction: row;
+        align-items: flex-start;
         margin-top: 100px;
       }
 
