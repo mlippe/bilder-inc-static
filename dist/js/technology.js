@@ -1,22 +1,89 @@
-const animationSection = document.querySelector(".animation-area");
-const canvas = document.getElementById("explosion-sequence");
-const context = canvas.getContext("2d");
+const animationSection = document.querySelectorAll(".animation-area");
+let animationContainer;
+let canvas;
+let context;
 let innerWidth = window.innerWidth;
 let innerHeight = window.innerHeight;
-const frameCount = 121;
-const sceneHeight = 1000;
-const img = new Image();
+let frameCount;
+let sceneHeight;
+let img;
 let progress = 0;
 let delay = 0;
 let lastDelay = 0;
 let animationInterval;
+let currentFrame;
+const controller = new ScrollMagic.Controller();
+const scene = new ScrollMagic.Scene();
 
-context.imageSmoothingEnabled = false;
+function setContent(arr) {
+  console.log(arr);
 
-const currentFrame = (index) =>
-  `../assets/explosion_sequence/Explosion_${index
-    .toString()
-    .padStart(5, "0")}.jpg`;
+  if (arr.includes("box")) {
+    animationContainer = document.querySelector(".animation-area.box");
+    canvas = document.getElementById("explosion-sequence");
+    context = canvas.getContext("2d");
+
+    frameCount = 121;
+    sceneHeight = window.innerHeight / 2;
+    img = new Image();
+
+    currentFrame = (index) =>
+      `../assets/explosion_sequence/Explosion_${index
+        .toString()
+        .padStart(5, "0")}.jpg`;
+
+    scene.duration(sceneHeight);
+    scene.triggerElement(animationContainer);
+  } else if (arr.includes("book")) {
+    animationContainer = document.querySelector(".animation-area.book");
+    canvas = document.getElementById("book-sequence");
+    context = canvas.getContext("2d");
+
+    frameCount = 80;
+    sceneHeight = window.innerHeight / 2;
+    img = new Image();
+
+    currentFrame = (index) =>
+      `../assets/book_sequence/bookintro_${index
+        .toString()
+        .padStart(5, "0")}.jpg`;
+
+    scene.duration(sceneHeight);
+    scene.triggerElement(animationContainer);
+  } else if (arr.includes("projector")) {
+    animationContainer = document.querySelector(".animation-area.projector");
+    canvas = document.getElementById("projector-sequence");
+    context = canvas.getContext("2d");
+
+    frameCount = 80;
+    sceneHeight = window.innerHeight / 2;
+    img = new Image();
+
+    currentFrame = (index) =>
+      `../assets/projector_sequence/projectorintro_${index
+        .toString()
+        .padStart(5, "0")}.jpg`;
+
+    scene.duration(sceneHeight);
+    scene.triggerElement(animationContainer);
+  } else if (arr.includes("scanner")) {
+    animationContainer = document.querySelector(".animation-area.scanner");
+    canvas = document.getElementById("scanner-sequence");
+    context = canvas.getContext("2d");
+
+    frameCount = 80;
+    sceneHeight = window.innerHeight / 2;
+    img = new Image();
+
+    currentFrame = (index) =>
+      `../assets/scanner_sequence/scannerintro_${index
+        .toString()
+        .padStart(5, "0")}.jpg`;
+
+    scene.duration(sceneHeight);
+    scene.triggerElement(animationContainer);
+  }
+}
 
 const preloadImages = () => {
   for (let i = 1; i < frameCount; i++) {
@@ -35,53 +102,29 @@ function drawToCanvas(img) {
   context.drawImage(img, x, y, img.width * scale, img.height * scale);
 }
 
-img.src = currentFrame(1);
-canvas.width = innerWidth;
-canvas.height = innerHeight;
-img.onload = function () {
-  drawToCanvas(img);
-};
-
-//SCROLLMAGIC
-const controller = new ScrollMagic.Controller();
-
-//INIT MAIN SCENE
-let scene = new ScrollMagic.Scene({
-  duration: sceneHeight,
-  triggerElement: animationSection,
-  triggerHook: 0,
-})
-  .setPin(animationSection)
-  .addTo(controller);
-
-//Video Animation
-
 const updateImage = (index) => {
   img.src = currentFrame(index);
   drawToCanvas(img);
   console.log("progress");
 };
 
-function resizeListener() {
-  innerWidth = window.innerWidth;
-  innerHeight = window.innerHeight;
-  setTimeout(() => {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    drawToCanvas(img);
-  }, 200);
-}
-
 function initAnimation() {
-  delay = lastDelay;
-  resizeListener();
-  window.addEventListener("resize", resizeListener);
+  scene.addTo(controller);
+  //delay = lastDelay;
+  context.imageSmoothingEnabled = false;
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight * 0.8;
+
+  img.src = currentFrame(1);
+  img.onload = function () {
+    drawToCanvas(img);
+  };
 
   scene.on("progress", (e) => {
     progress = e.progress;
     console.log(e.progress);
 
-    //console.log("progress", progress);
+    console.log("progress", progress);
   });
 
   animationInterval = setInterval(() => {
@@ -96,8 +139,7 @@ function initAnimation() {
 }
 
 function resetScene() {
-  window.removeEventListener("resize", resizeListener);
-  scene.off("update");
+  scene.destroy();
   clearInterval(animationInterval);
   lastDelay = delay;
 }
@@ -107,12 +149,14 @@ function resetScene() {
 let callback = (entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      resizeListener();
+      setContent([...entry.target.classList]);
+      console.log(entry);
+      //resizeListener();
       initAnimation();
-      animationSection.classList.add("inview");
+      entry.target.classList.add("inview");
     } else {
       resetScene();
-      animationSection.classList.remove("inview");
+      entry.target.classList.remove("inview");
     }
   });
 };
@@ -122,4 +166,6 @@ let animationRunObserver = new IntersectionObserver(callback, {
   threshold: 0,
 });
 
-animationRunObserver.observe(animationSection);
+animationSection.forEach((section) => {
+  animationRunObserver.observe(section);
+});

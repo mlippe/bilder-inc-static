@@ -1,9 +1,3 @@
-@font-face { font-family: "Stolzl Regular"; src: url("/asstes/fonts/Stolzl-Regular.ttf") format("ttf"); }
-
-@font-face { font-family: "Stolzl Medium"; src: url("/asstes/fonts/Stolzl-Medium.ttf") format("ttf"); }
-
-@font-face { font-family: "Stolzl Bold"; src: url("/asstes/fonts/Stolzl-Bold.ttf") format("ttf"); }
-
 .floating-content { width: 100%; max-width: 1800px; margin: 175px auto; position: relative; display: flex; flex-direction: column; }
 
 .floating-content.no-shadow .image-container img { box-shadow: none; }
@@ -21,6 +15,8 @@
 @media (min-width: 600px) and (max-width: 999px) { .floating-content .text-container { margin-top: 50px !important; } }
 
 .floating-content .text-container .inner { display: flex; flex-direction: column; max-width: 510px; }
+
+@media (min-width: 1000px) { .floating-content .text-container .inner { text-shadow: 0 0 30px black; } }
 
 @media (max-width: 599px) { .floating-content .text-container .inner { max-width: initial; } }
 

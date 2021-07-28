@@ -50,6 +50,10 @@
       flex-direction: column;
       max-width: 510px;
 
+      @include desktop {
+        text-shadow: 0 0 30px rgba(0, 0, 0, 1);
+      }
+
       @include phone-only {
         max-width: initial;
       }

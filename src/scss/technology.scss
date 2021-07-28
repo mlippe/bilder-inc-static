@@ -244,6 +244,12 @@
         }
       }
     }
+
+    .animation-area {
+      canvas {
+        width: 100%;
+      }
+    }
   }
 
   section.bilderbox {
@@ -252,10 +258,28 @@
         color: $orange;
       }
     }
+  }
 
-    .animation-area {
-      canvas {
-        width: 100%;
+  section.bilderbook {
+    h1 {
+      em {
+        color: $green;
+      }
+    }
+  }
+
+  section.bilderbeam {
+    h1 {
+      em {
+        color: $lightblue;
+      }
+    }
+  }
+
+  section.bilderscan {
+    h1 {
+      em {
+        color: $red;
       }
     }
   }
