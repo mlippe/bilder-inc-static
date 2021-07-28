@@ -135,9 +135,9 @@ p { font-size: 20px; color: #c6c6c6; line-height: 130%; margin-bottom: 20px; }
 
 @media (min-width: 1000px) { .navbar .inner .left .link, .navbar .inner .right .link { display: block; } }
 
-.navbar .inner .left .link.active, .navbar .inner .right .link.active { color: #fff; opacity: 1; }
+.navbar .inner .left .link.active, .navbar .inner .right .link.active { color: #fff; text-shadow: 0px 2px 20px #fff; opacity: 1; }
 
-.navbar .inner .left .link:hover, .navbar .inner .right .link:hover { color: #fff; text-shadow: 0px 2px 20px #fff; opacity: 1; }
+.navbar .inner .left .link:hover, .navbar .inner .right .link:hover { color: #fff; opacity: 1; }
 
 .navbar .color-border { width: 100%; height: 2px; display: flex; }
 
@@ -462,6 +462,14 @@ p { font-size: 20px; color: #c6c6c6; line-height: 130%; margin-bottom: 20px; }
 .technology section.bilderbeam h1 em { color: #1fbcff; }
 
 .technology section.bilderscan h1 em { color: #dc3318; }
+
+.buy-now .navbar .technology-link { margin-right: 0 !important; }
+
+.buy-now .navbar .buy-now-link { display: none !important; }
+
+.buy-now .menu-mobile .buy-now-link { display: none !important; }
+
+.buy-now section.footer .inner .top .right { display: none; }
 
 .buy-now section.buy-section { padding: 100px 0; }
 
@@ -790,6 +798,12 @@ p { font-size: 20px; color: #c6c6c6; line-height: 130%; margin-bottom: 20px; }
 .about section.research .download-wrap .button { margin: 30px 0 12px; }
 
 .about section.research .download-wrap .notice { font-size: 12px; color: #fff; opacity: 0.5; }
+
+.imprint p { line-height: 150%; }
+
+.imprint p a { color: #fff; }
+
+.imprint h2 { padding-top: 100px; }
 
 .problem-cards .inner .card-container { display: flex; margin-top: 100px; justify-content: space-between; flex-direction: column; }
 

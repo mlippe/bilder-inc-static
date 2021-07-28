@@ -1,0 +1,15 @@
+@import "_variables.scss";
+@import "mixins";
+
+.imprint {
+  p {
+    line-height: 150%;
+
+    a {
+      color: $white;
+    }
+  }
+  h2 {
+    padding-top: 100px;
+  }
+}

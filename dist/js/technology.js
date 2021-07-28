@@ -110,10 +110,11 @@ const updateImage = (index) => {
 
 function initAnimation() {
   scene.addTo(controller);
+  scene.offset(window.innerHeight / 4);
   //delay = lastDelay;
   context.imageSmoothingEnabled = false;
   canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight * 0.8;
+  canvas.height = window.innerHeight;
 
   img.src = currentFrame(1);
   img.onload = function () {

@@ -1,3 +1,11 @@
+.buy-now .navbar .technology-link { margin-right: 0 !important; }
+
+.buy-now .navbar .buy-now-link { display: none !important; }
+
+.buy-now .menu-mobile .buy-now-link { display: none !important; }
+
+.buy-now section.footer .inner .top .right { display: none; }
+
 .buy-now section.buy-section { padding: 100px 0; }
 
 .buy-now section.buy-section .inner { display: flex; flex-direction: column; width: calc(100% - 40px); }

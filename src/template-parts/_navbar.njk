@@ -1,4 +1,4 @@
-{% macro el(isHome) %}
+{% macro el(isHome, currentPage) %}
   <nav class="navbar layout">
     <div class="inner grid-max">
       <div class="left">
@@ -6,11 +6,11 @@
           {%if isHome%}
             <img src="assets/img/logo.png"/> {%else%} <img src="../assets/img/logo.png"/> {%endif%}
           </a>
-          <a class="link about-link" href="/about">About us</a>
+          <a {%if currentPage === "about"%} class="link about-link active" {% else %} class="link about-link" {%endif%} href="/about">About us</a>
         </div>
         <div class="right">
-          <a class="link features-link" href="/features">Features</a>
-          <a class="link technology-link" href="/technology">Technology</a>
+          <a {%if currentPage === "features"%} class="link features-link active" {% else %} class="link features-link" {%endif%} href="/features">Features</a>
+          <a {%if currentPage === "technology"%} class="link technology-link active" {% else %} class="link technology-link" {%endif%} href="/technology">Technology</a>
           <a class="button button-small link buy-now-link" href="/buy-now">Buy Now</a>
           {%if isHome%}
             <img class="menu-toggle" src="/assets/img/menu.svg"/> {%else%} <img class="menu-toggle" src="../assets/img/menu.svg"/>
@@ -27,9 +27,9 @@
       </nav>
       <div class="menu-mobile hidden">
         <div class="inner">
-          <a class="link about-link" href="/about">About us</a>
-          <a class="link features-link" href="/features">Features</a>
-          <a class="link technology-link" href="/technology">Technology</a>
+          <a {%if currentPage === "about"%} class="link about-link active" {% else %} class="link about-link" {%endif%} href="/about">About us</a>
+          <a {%if currentPage === "features"%} class="link features-link active" {% else %} class="link features-link" {%endif%} href="/features">Features</a>
+          <a {%if currentPage === "technology"%} class="link technology-link active" {% else %} class="link technology-link" {%endif%} href="/technology">Technology</a>
           <a class="button button-small link buy-now-link" href="/buy-now">Buy Now</a>
           {%if isHome%}
             <img class="close" src="/assets/img/close.svg"/> {%else%} <img class="close" src="../assets/img/close.svg"/>

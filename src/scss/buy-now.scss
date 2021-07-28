@@ -2,6 +2,31 @@
 @import "mixins";
 
 .buy-now {
+  .navbar {
+    .technology-link {
+      margin-right: 0 !important;
+    }
+
+    .buy-now-link {
+      display: none !important;
+    }
+  }
+  .menu-mobile {
+    .buy-now-link {
+      display: none !important;
+    }
+  }
+
+  section.footer {
+    .inner {
+      .top {
+        .right {
+          display: none;
+        }
+      }
+    }
+  }
+
   section.buy-section {
     padding: 100px 0;
 
