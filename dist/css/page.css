@@ -79,7 +79,7 @@ p { font-size: 20px; color: #c6c6c6; line-height: 130%; margin-bottom: 20px; }
 .button.blue { background: #003e8e; }
 
 /* ---- SCROLL --- */
-.scroll-indicator { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; opacity: 0.5; z-index: 15; }
+.scroll-indicator { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; opacity: 0.5; z-index: 15; }
 
 .scroll-indicator img { animation: scroll-hint 3s ease infinite; }
 

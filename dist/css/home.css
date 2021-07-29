@@ -4,11 +4,7 @@
 
 .home .hero canvas { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
 
-.home .hero .gradients { position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10; }
-
-.home .hero .gradients .top { position: absolute; top: 0; left: 0; width: 100%; height: 10%; background: linear-gradient(180deg, #181413, #18141300); z-index: 10; }
-
-.home .hero .gradients .bottom { position: absolute; bottom: 0; left: 0; width: 100%; height: 10%; background: linear-gradient(0deg, #181413, #18141300); z-index: 10; }
+.home .hero .gradient { position: absolute; bottom: 0; left: 0; width: 100%; height: 10%; background: linear-gradient(0deg, #181413, #18141300); z-index: 10; }
 
 .home .hero .wrapper { position: relative; max-width: 1250px; height: 100vh; margin: 0 auto; z-index: 2; }
 

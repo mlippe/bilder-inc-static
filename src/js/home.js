@@ -29,9 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
   preloadImages();
 
   function drawToCanvas(img) {
-    scale =
-      (window.innerWidth / window.innerHeight) *
-      Math.max(canvas.width / img.width, canvas.height / img.height);
+    scale = Math.max(canvas.width / img.width, canvas.height / img.height);
 
     // get the top left position of the image
     const x = canvas.width / 2 - (img.width / 2) * scale;
@@ -91,18 +89,9 @@ document.addEventListener("DOMContentLoaded", function () {
     drawToCanvas(img);
   };
 
-  function resizeListener() {
-    setTimeout(() => {
-      canvas.width = window.innerWidth * 2;
-      canvas.height = window.innerHeight * 2;
-
-      drawToCanvas(img);
-    }, 200);
-  }
-
   function initAnimation() {
-    resizeListener();
-    window.addEventListener("resize", resizeListener);
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
 
     scene.on("progress", (e) => {
       progress = e.progress;
@@ -124,8 +113,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function resetScene() {
-    window.removeEventListener("resize", resizeListener);
-
     scene.off("update");
 
     clearInterval(animationInterval);
