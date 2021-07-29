@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function () {
   window.scroll(0, 0);
   setTimeout(() => {
     window.scrollTo({
-      top: innerHeight / 4,
+      top: window.innerHeight / 4,
       behavior: "smooth",
     });
   }, 200);

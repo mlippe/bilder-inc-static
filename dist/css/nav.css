@@ -10,7 +10,7 @@
 
 .navbar.out-of-view { transform: translate3d(0, -68px, 0); }
 
-.navbar.out-of-view:after { content: ""; position: absolute; bottom: -75px; left: 0; width: 100%; height: 75px; }
+.navbar.out-of-view:after { content: ""; position: absolute; bottom: -60px; left: 0; width: 100%; height: 60px; }
 
 .navbar.mouse-trigger:after { content: ""; position: absolute; bottom: -75px; left: 0; width: 100%; height: 75px; }
 

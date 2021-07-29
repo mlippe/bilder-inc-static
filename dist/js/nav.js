@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function triggerNavbar() {
     let st = window.pageYOffset || document.documentElement.scrollTop;
     if (st > lastScrollTop) {
-      if (st > 300) {
+      if (st > window.innerHeight / 4 + 10) {
         navbar.classList.add("out-of-view");
         navbar.classList.remove("mouse-trigger");
       } else {
@@ -29,6 +29,13 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   navbar.addEventListener("mouseenter", function () {
+    if (navbar.classList.contains("out-of-view")) {
+      navbar.classList.remove("out-of-view");
+      navbar.classList.add("mouse-trigger");
+    }
+  });
+
+  navbar.addEventListener("click", function () {
     if (navbar.classList.contains("out-of-view")) {
       navbar.classList.remove("out-of-view");
       navbar.classList.add("mouse-trigger");
