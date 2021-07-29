@@ -486,11 +486,17 @@ p { font-size: 20px; color: #c6c6c6; line-height: 130%; margin-bottom: 20px; }
 
 .technology section.hardware .inner .intro h3 { max-width: 890px; }
 
-.technology section.hardware .animation-area { width: 100%; }
+.technology section.hardware .animation-area { width: 100%; position: relative; }
 
 .technology section.hardware .animation-area img { width: 100%; position: absolute; left: 0; z-index: -10; }
 
-.technology section.hardware .animation-area canvas { width: 100%; }
+.technology section.hardware .animation-area canvas { width: 100%; position: relative; }
+
+.technology section.hardware .animation-area .gradient { content: ""; position: absolute; left: 0; z-index: 10; width: 100%; height: 100px; }
+
+.technology section.hardware .animation-area .gradient.top { background: linear-gradient(0deg, #18141300, #181413); top: 0; }
+
+.technology section.hardware .animation-area .gradient.bottom { background: linear-gradient(180deg, #18141300, #181413); bottom: 0; }
 
 .technology section.bilderbox h1 em { color: #ffbb1c; }
 
