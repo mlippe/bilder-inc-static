@@ -140,15 +140,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
   animationRunObserver.observe(animationSection);
 
-  document.addEventListener("DOMContentLoaded", function (event) {
-    window.scroll(0, 0);
-    setTimeout(() => {
-      window.scrollTo({
-        top: innerHeight / 4,
-        behavior: "smooth",
-      });
-    }, 200);
-  });
+  window.scroll(0, 0);
+  setTimeout(() => {
+    window.scrollTo({
+      top: innerHeight / 4,
+      behavior: "smooth",
+    });
+  }, 200);
 
   // TOGGLE PROBLEM CARDS
 
