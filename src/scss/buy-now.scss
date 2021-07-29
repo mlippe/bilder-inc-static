@@ -10,6 +10,12 @@
     .buy-now-link {
       display: none !important;
     }
+
+    .inner {
+      @include tablet {
+        margin: 20px 50px 0;
+      }
+    }
   }
   .menu-mobile {
     .buy-now-link {

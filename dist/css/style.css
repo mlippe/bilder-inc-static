@@ -513,6 +513,8 @@ p { font-size: 20px; color: #c6c6c6; line-height: 130%; margin-bottom: 20px; }
 
 .buy-now .navbar .buy-now-link { display: none !important; }
 
+@media (min-width: 600px) { .buy-now .navbar .inner { margin: 20px 50px 0; } }
+
 .buy-now .menu-mobile .buy-now-link { display: none !important; }
 
 .buy-now section.footer .inner .top .right { display: none; }
