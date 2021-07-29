@@ -1,10 +1,10 @@
 {% macro el(isHome,title) %}
-  <div class="problem-cards">
+  <div class="problem-cards scroll-animation">
     <div class="layout">
       <div class="inner grid-max">
         <h2>{{ title }}</h2>
         <div class="card-container">
-          <div class="card">
+          <div class="card inner-delay level-2">
             {% if isHome %}
               <img src="assets/img/problem-cards/clutter.svg"/>
             {% else %}
@@ -14,7 +14,7 @@
             <div class="desc">Many photo libraries are distributed among different types of media: on phones, computers, harddrives
               or event prints. Specific photos aren’t found quickly this way. The centralised nature of BilderBox helps with this.</div>
           </div>
-          <div class="card">
+          <div class="card inner-delay level-3">
             {% if isHome %}
               <img src="assets/img/problem-cards/spiderweb.svg"/>
             {% else %}
@@ -24,7 +24,7 @@
             <div class="desc">More and more photos are taken every day. Yet we tend to not look at them very often. BilderBook and
               BilderBeam promote the consumation of your memories: enjoy personalised photo curations!</div>
           </div>
-          <div class="card">
+          <div class="card inner-delay level-4">
             {% if isHome %}
               <img src="assets/img/problem-cards/safe.svg"/>
             {% else %}

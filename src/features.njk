@@ -10,13 +10,13 @@
   </head>
   <body class="features">
     {{ navBar.el(false, "features") }}
-    <section class="hero">
-      <div class="background-animation">
+    <section class="hero scroll-animation">
+      <div class="background-animation inner-delay level-2">
         <div class="gradient top"></div>
         <div class="gradient bottom"></div>
-        <img src="../assets/img/features/hero.png"/>
+        <img src="../assets/img/features/hero.jpg"/>
       </div>
-      <div class="layout">
+      <div class="layout inner-delay level-1">
         <div class="inner grid-max">
           <h1>You like taking photos.<br>We like organizing them.</h1>
           <h3>BilderAi is the magic part in the Bilder system. It takes care of all the tedious work for you.</h3>
@@ -27,7 +27,7 @@
       <div class="image-container">
         <img src="/assets/img/features/bilder-ai.jpg"/>
       </div>
-      <div class="inner layout">
+      <div class="inner layout scroll-animation level-1">
         <div class="content grid-max">
           <div class="text-wrap">
             <h1>
@@ -38,8 +38,8 @@
         </div>
       </div>
     </section>
-    <section class="organization">
-      <div class="intro">
+    <section id="organization" class="organization">
+      <div class="intro scroll-animation level-1">
         <div class="layout">
           <div class="grid-max">
             <h1>Library<br><em>organization</em>
@@ -54,8 +54,8 @@
       {{ floatingContent.el(false,'center','assets/img/features/collections.jpg', '110px', 'Automated photo collections','BilderAi automatically prepares collections on specific themes, such as locations or events for you!', '', '' ) }}
       {{ floatingContent.el(false,'left','assets/img/features/adjustments.jpg', '100px', 'Powerful adjustments','Be creative and edit images with BilderApps powerful tools. Non-destructive and integrated.', '', 'orange' ) }}
     </section>
-    <section class="sharing">
-      <div class="intro">
+    <section id="sharing" class="sharing">
+      <div class="intro scroll-animation level-1">
         <div class="layout">
           <div class="grid-max">
             <h1>Photo
@@ -70,7 +70,7 @@
       {{ floatingContent.el(false,'right','assets/img/features/enjoy.jpg', '110px', 'Enjoy your photos again','BilderBook and BilderBeam make it fun to look at your photos. Pick them up anytime and experience your memories like in the old times.', '', 'blue' ) }}
     </section>
     <section class="anywhere">
-      <div class="intro">
+      <div class="intro scroll-animation level-1">
         <div class="layout">
           <div class="grid-max">
             <h1>And the best thing:<br>BilderApps make your<br>
@@ -79,7 +79,7 @@
           </div>
         </div>
       </div>
-      <div class="image-container">
+      <div class="image-container scroll-animation level-2">
         <img src="../assets/img/features/devices.jpg"/>
       </div>
     </section>

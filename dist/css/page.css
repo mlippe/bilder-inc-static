@@ -79,11 +79,40 @@ p { font-size: 20px; color: #c6c6c6; line-height: 130%; margin-bottom: 20px; }
 .button.blue { background: #003e8e; }
 
 /* ---- SCROLL --- */
-.scroll-indicator { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; opacity: 0.5; }
+.scroll-indicator { position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; opacity: 0.5; z-index: 15; }
 
 .scroll-indicator img { animation: scroll-hint 3s ease infinite; }
 
 .scroll-indicator .text { margin-top: 10px; color: #fff; animation: scroll-hint-opacity 3s ease infinite; }
+
+/* Global scroll animation helper classes */
+.scroll-animation { opacity: 0; transform: translate3d(0, 2vh, 0); will-change: transform, opacity; transition: opacity 1s ease, transform 1.2s ease; }
+
+.scroll-animation.in-viewport { opacity: 1; transform: translate3d(0, 0, 0); }
+
+.scroll-animation.in-viewport .inner-delay { opacity: 1; transform: translate3d(0, 0, 0); }
+
+.scroll-animation .inner-delay { opacity: 0; transform: translate3d(0, 4vh, 0); will-change: transform, opacity; transition: opacity 1.2s ease, transform 1.5s ease; }
+
+.scroll-animation .inner-delay.level-1 { transition-delay: 0.3s; }
+
+.scroll-animation .inner-delay.level-2 { transition-delay: 0.6s; }
+
+.scroll-animation .inner-delay.level-3 { transition-delay: 0.9s; }
+
+.scroll-animation .inner-delay.level-4 { transition-delay: 1.2s; }
+
+.scroll-animation .inner-delay.level-5 { transition-delay: 1.5s; }
+
+.scroll-animation.level-1 { transition-delay: 0.3s; }
+
+.scroll-animation.level-2 { transition-delay: 0.6s; }
+
+.scroll-animation.level-3 { transition-delay: 0.9s; }
+
+.scroll-animation.level-4 { transition-delay: 1.2s; }
+
+.scroll-animation.level-5 { transition-delay: 1.5s; }
 
 @keyframes scroll-hint { 0% { transform: translate3d(0, 0, 0); }
   40% { transform: translate3d(0, 0, 0); }

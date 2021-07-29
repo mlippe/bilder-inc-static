@@ -70,13 +70,17 @@
         </div>
       </div>
       <canvas id="start-sequence"></canvas>
+      <div class="gradients">
+        <div class="top"></div>
+        <div class="bottom"></div>
+      </div>
       <div class="scroll-indicator">
         <img src="assets/img/scroll_indicator.svg"/>
         <div class="text">Scroll down</div>
       </div>
     </section>
     <section class="one-central-space">
-      <div class="inner layout">
+      <div class="inner layout scroll-animation">
         <div class="content grid-max">
           <h1>
             <em>One central space</em>
@@ -84,16 +88,16 @@
           <h3>Organization. Consumation. Sharing. Backing up. All in one.</h3>
         </div>
       </div>
-      <img src="/assets/img/home/easy_import.jpg"/>
+      <img class="scroll-animation" src="/assets/img/home/easy_import.jpg"/>
       <div class="button button-large outline">Why is this so cool?</div>
       <div class="hide-wrapper" style="display: none;">
         
-  <div class="problem-cards">
+  <div class="problem-cards scroll-animation">
     <div class="layout">
       <div class="inner grid-max">
         <h2>Bilder Inc. tackles 3 big problems of personal photography today</h2>
         <div class="card-container">
-          <div class="card">
+          <div class="card inner-delay level-2">
             
               <img src="assets/img/problem-cards/clutter.svg"/>
             
@@ -101,7 +105,7 @@
             <div class="desc">Many photo libraries are distributed among different types of media: on phones, computers, harddrives
               or event prints. Specific photos aren’t found quickly this way. The centralised nature of BilderBox helps with this.</div>
           </div>
-          <div class="card">
+          <div class="card inner-delay level-3">
             
               <img src="assets/img/problem-cards/spiderweb.svg"/>
             
@@ -109,7 +113,7 @@
             <div class="desc">More and more photos are taken every day. Yet we tend to not look at them very often. BilderBook and
               BilderBeam promote the consumation of your memories: enjoy personalised photo curations!</div>
           </div>
-          <div class="card">
+          <div class="card inner-delay level-4">
             
               <img src="assets/img/problem-cards/safe.svg"/>
             
@@ -128,7 +132,7 @@
     <section class="ecosystem">
       <div class="intro">
         <img src="/assets/img/home/ecosystem.jpg"/>
-        <div class="layout">
+        <div class="layout scroll-animation">
           <div class="grid-max">
             <h1>Meet the<br><em>Bilder Ecosystem</em>
             </h1>
@@ -138,20 +142,20 @@
       </div>
       
   
-      <div class="floating-content left">
+      <div class="floating-content scroll-animation left">
       
       <div class="image-container">
         
           <img src="assets/img/home/easy_import2.jpg"/>
         
       </div>
-      <div class="layout">
+      <div class="layout inner-delay level-1">
         <div class="text-container grid-max" style="margin-top: 360px">
           <div class="inner">
             <h2>Easy importing</h2>
             <h4>Add your photos in no time, doesn’t matter how you store them today...</h4>
             
-              <a href="#" class="button button-large orange">Learn more</a>
+              <a href="technology#bilderbox" class="button button-large orange">Learn more</a>
             
           </div>
         </div>
@@ -160,20 +164,20 @@
   
       
   
-      <div class="floating-content right">
+      <div class="floating-content scroll-animation right">
       
       <div class="image-container">
         
           <img src="assets/img/home/automatic_organization.jpg"/>
         
       </div>
-      <div class="layout">
+      <div class="layout inner-delay level-1">
         <div class="text-container grid-max" style="margin-top: 90px">
           <div class="inner">
             <h2>Automatic Organization</h2>
             <h4>BilderAi analyses your photos and organizes them in a timeline and collections by itself.</h4>
             
-              <a href="#" class="button button-large ">Learn more</a>
+              <a href="features#organization" class="button button-large ">Learn more</a>
             
           </div>
         </div>
@@ -182,20 +186,20 @@
   
       
   
-      <div class="floating-content left">
+      <div class="floating-content scroll-animation left">
       
       <div class="image-container">
         
           <img src="assets/img/home/book.jpg"/>
         
       </div>
-      <div class="layout">
+      <div class="layout inner-delay level-1">
         <div class="text-container grid-max" style="margin-top: 220px">
           <div class="inner">
             <h2>Familiar viewing experience</h2>
             <h4>BilderBook album contains 10 beautiful OLED screens. Flip through memories like in the good old times.</h4>
             
-              <a href="#" class="button button-large green">Learn more</a>
+              <a href="technology#bilderbook" class="button button-large green">Learn more</a>
             
           </div>
         </div>
@@ -204,20 +208,20 @@
   
       
   
-      <div class="floating-content right">
+      <div class="floating-content scroll-animation right">
       
       <div class="image-container">
         
           <img src="assets/img/home/projector.jpg"/>
         
       </div>
-      <div class="layout">
+      <div class="layout inner-delay level-1">
         <div class="text-container grid-max" style="margin-top: 125px">
           <div class="inner">
             <h2>Effortless slideshows</h2>
             <h4>BilderBeam is quick and easy to set up. It’s 3h battery life gets it through those popcorn nights.</h4>
             
-              <a href="#" class="button button-large blue">Learn more</a>
+              <a href="technology#bilderbeam" class="button button-large blue">Learn more</a>
             
           </div>
         </div>
@@ -226,20 +230,20 @@
   
       
   
-      <div class="floating-content left">
+      <div class="floating-content scroll-animation left">
       
       <div class="image-container">
         
           <img src="assets/img/home/social.jpg"/>
         
       </div>
-      <div class="layout">
+      <div class="layout inner-delay level-1">
         <div class="text-container grid-max" style="margin-top: 110px">
           <div class="inner">
             <h2>Social libraries</h2>
             <h4>Share your favourite photos through BilderApps. Shared images will appear directly in others libraries.</h4>
             
-              <a href="#" class="button button-large ">Learn more</a>
+              <a href="features#sharing" class="button button-large ">Learn more</a>
             
           </div>
         </div>
@@ -248,20 +252,20 @@
   
       
   
-      <div class="floating-content right">
+      <div class="floating-content scroll-animation right">
       
       <div class="image-container">
         
           <img src="assets/img/home/backups.jpg"/>
         
       </div>
-      <div class="layout">
+      <div class="layout inner-delay level-1">
         <div class="text-container grid-max" style="margin-top: 90px">
           <div class="inner">
-            <h2>Effortless slideshows</h2>
+            <h2>State of the art Backups</h2>
             <h4>BilderBox is equipped with two drives with a mirrored filesystem. They are also user exchangable. </h4>
             
-              <a href="#" class="button button-large orange">Learn more</a>
+              <a href="technology#bilderbox" class="button button-large orange">Learn more</a>
             
           </div>
         </div>
@@ -270,20 +274,20 @@
   
       
   
-      <div class="floating-content left">
+      <div class="floating-content scroll-animation left">
       
       <div class="image-container">
         
           <img src="assets/img/home/wifi.jpg"/>
         
       </div>
-      <div class="layout">
+      <div class="layout inner-delay level-1">
         <div class="text-container grid-max" style="margin-top: 110px">
           <div class="inner">
             <h2>Storage under your control</h2>
             <h4>Your photos stay local in your BilderBox. Simply connect it to home WiFi to access your library anywhere.</h4>
             
-              <a href="#" class="button button-large green">Learn more</a>
+              <a href="technology#bilderbox" class="button button-large green">Learn more</a>
             
           </div>
         </div>
@@ -293,10 +297,10 @@
       <div class="gradient-end"></div>
     </section>
     <section class="testimonials">
-      <div class="layout">
+      <div class="layout scroll-animation">
         <div class="inner grid-max">
           <h1>What our customers say:</h1>
-          <div class="testimonial-container">
+          <div class="testimonial-container inner-delay level-3">
             <div class="testimonial-content">
               <div class="testimonial">
                 <img class="quotation-mark" src="/assets/img/home/quotation.svg">
@@ -318,12 +322,12 @@
       </div>
     </section>
     
-  <section class="offer">
+  <section class="offer scroll-animation">
     
-      <img src="/assets/img/offer.png"/> 
+      <img class="inner-delay level-1" src="/assets/img/offer.png"/> 
       <div class="layout">
         <div class="inner grid-max">
-          <div class="wrapper">
+          <div class="wrapper inner-delay level-2">
             <h2>Tired of cluttered photo libraries?</h2>
             <h4>Buy your BilderBox now and get an exclusive Early-Bird offer.</h4>
             <a class="button button-large" href="/buy-now">Claim Offer</a>

@@ -10,13 +10,13 @@
   </head>
   <body class="technology">
     {{ navBar.el(false, "technology") }}
-    <section class="hero">
-      <div class="background">
+    <section class="hero scroll-animation">
+      <div class="background inner-delay level-2">
         <img class="projector" src="../assets/img/technology/projector-scanner.png"/>
         <img class="book" src="../assets/img/technology/book.png"/>
         <img class="box" src="../assets/img/technology/box.png"/>
       </div>
-      <div class="layout">
+      <div class="layout inner-delay level-1">
         <div class="inner grid-max">
           <h1>Designed to give
             <em>your photos a new home.</em>
@@ -26,10 +26,10 @@
       </div>
     </section>
     <section class="devices">
-      <div class="layout">
+      <div class="layout scroll-animation">
         <div class="inner grid-max">
           <div class="unit">
-            <div class="device">
+            <div class="device inner-delay level-1">
               <div class="image-container">
                 <img src="../assets/img/technology/frontview_box.png"/>
               </div>
@@ -39,7 +39,7 @@
               </div>
               <a href="#bilderbox" class="button">Discover</a>
             </div>
-            <div class="device">
+            <div class="device inner-delay level-2">
               <div class="image-container">
                 <img src="../assets/img/technology/frontview_book.png"/>
               </div>
@@ -51,7 +51,7 @@
             </div>
           </div>
           <div class="unit">
-            <div class="device">
+            <div class="device inner-delay level-3">
               <div class="image-container">
                 <img src="../assets/img/technology/frontview_projector.png"/>
               </div>
@@ -61,7 +61,7 @@
               </div>
               <a href="#bilderbeam" class="button">Discover</a>
             </div>
-            <div class="device">
+            <div class="device inner-delay level-4">
               <div class="image-container">
                 <img src="../assets/img/technology/frontview_scanner.png"/>
               </div>
@@ -76,7 +76,7 @@
       </div>
     </section>
     <section id="bilderbox" class="hardware bilderbox">
-      <div class="layout">
+      <div class="layout scroll-animation">
         <div class="inner grid-max">
           <div class="intro">
             <h1>
@@ -88,13 +88,14 @@
       </div>
       <div class="animation-area box">
         <canvas id="explosion-sequence"></canvas>
+        <img src="../assets/explosion_sequence/Explosion_00000.jpg"/>
       </div>
       {{ floatingContent.el(false,'left','assets/img/technology/import.jpg', '360px', 'Easy import','Quickly add all of your existing photos to BilderBox, no matter how you store them now.', '', 'orange' ) }}
       {{ floatingContent.el(false,'center','assets/img/home/wifi.jpg', '90px', 'Storage under your control','Your photos stay local in your BilderBox. Simply connect it to home WiFi to access your library anywhere.', '', '', true ) }}
       {{ floatingContent.el(false,'right','assets/img/home/backups.jpg', '160px', 'State of the art Backups','BilderBox is equipped with two drives with a mirrored filesystem. They are also user exchangable.', '', 'green' ) }}
     </section>
     <section id="bilderbook" class="hardware bilderbook">
-      <div class="layout">
+      <div class="layout scroll-animation">
         <div class="inner grid-max">
           <div class="intro">
             <h1>
@@ -106,13 +107,14 @@
       </div>
       <div class="animation-area book">
         <canvas id="book-sequence"></canvas>
+        <img src="../assets/book_sequence/bookintro_00000.jpg"/>
       </div>
       {{ floatingContent.el(false,'right','assets/img/technology/book_layouts.jpg', '50px', 'Beautiful layouts','Pick BilderBook up anytime and enjoy a random photo collection, displayed in a beautiful, premade layout.', '', 'orange' ) }}
       {{ floatingContent.el(false,'center','assets/img/technology/book_detail.jpg', '90px', 'Ingenious hinge design','10 flexible, ulrathin OLED screens make BilderBook possible. Enclosed in an ingenious hinge.', '', '' ) }}
       {{ floatingContent.el(false,'left','assets/img/technology/book_ui.jpg', '160px', 'Choose your collections','Want to view a specific collection in BilderBook? No problem, just choose it in the app and get going.', '', 'green' ) }}
     </section>
     <section id="bilderbeam" class="hardware bilderbeam">
-      <div class="layout">
+      <div class="layout scroll-animation">
         <div class="inner grid-max">
           <div class="intro">
             <h1>
@@ -124,13 +126,14 @@
       </div>
       <div class="animation-area projector">
         <canvas id="projector-sequence"></canvas>
+        <img src="../assets/projector_sequence/projectorintro_00000.jpg"/>
       </div>
       {{ floatingContent.el(false,'left','assets/img/home/projector.jpg', '90px', 'Hassle-free diashows','Quick to set up, ultra-portable, 3h battery life on a charge. What do you need more to enjoy your photos with friends?', '', 'orange' ) }}
       {{ floatingContent.el(false,'center','assets/img/technology/projector_detail.jpg', '90px', 'Adjustable lens','No matter where you place BilderBeam, you always get the best picture. This little slider lets you control the angle of projection.', '', '' ) }}
       {{ floatingContent.el(false,'right','assets/img/technology/projector_ui.jpg', '160px', 'Always in control','When projecting photos with BilderBeam, choose what collections or photos to show with BilderApps on your favourite device.', '', 'green' ) }}
     </section>
     <section id="bilderscan" class="hardware bilderscan">
-      <div class="layout">
+      <div class="layout scroll-animation">
         <div class="inner grid-max">
           <div class="intro">
             <h1>
@@ -142,6 +145,7 @@
       </div>
       <div class="animation-area scanner">
         <canvas id="scanner-sequence"></canvas>
+        <img src="../assets/scanner_sequence/scannerintro_00000.jpg"/>
       </div>
       {{ floatingContent.el(false,'left','assets/img/technology/scanner.jpg', '90px', 'Scan prints & albums','BilderScan allows you to quickly scan your paper photos. Just swipe the scanner over any photo print or album and the scanned photos will show up in your library instantly.', '', 'orange' ) }}
       {{ floatingContent.el(false,'center','assets/img/technology/scanner_film1.jpg', '90px', 'Negatives & Slides','Get high quality scans of your negatives and slides with the film scan rack. Supports 35mm negative and posititve film.', '', '' ) }}

@@ -10,7 +10,7 @@
   <body class="buy-now">
     {{ navBar.el(false) }}
     <section class="buy-section">
-      <div class="layout">
+      <div class="layout scroll-animation">
         <div class="inner grid-max">
           <div class="left">
             <div
@@ -127,25 +127,25 @@
       </div>
     </section>
     <section class="details">
-      <div class="layout">
+      <div class="layout scroll-animation">
         <div class="inner grid-max">
           <h1>Details</h1>
           <div class="image-container">
-            <div class="image-item">
+            <div class="image-item inner-delay level-1">
               <img src="../assets/img/buy-now/frontview.png"/>
               <div class="size-container">
                 <div class="line"></div>
                 <div class="number">42cm</div>
               </div>
             </div>
-            <div class="image-item">
+            <div class="image-item inner-delay level-2">
               <img src="../assets/img/buy-now/sideview.png"/>
               <div class="size-container">
                 <div class="line"></div>
                 <div class="number">12cm</div>
               </div>
             </div>
-            <div class="image-item">
+            <div class="image-item inner-delay level-3">
               <img src="../assets/img/buy-now/backview.png"/>
               <div class="size-container">
                 <div class="line"></div>
@@ -154,7 +154,7 @@
             </div>
           </div>
           <div class="details-container">
-            <div class="details-unit">
+            <div class="details-unit inner-delay level-1">
               <h5>Hardware</h5>
               <ul>
                 <li>Modern classic design</li>
@@ -164,7 +164,7 @@
                 <li>Multiple devices to easily scan and consume photos</li>
               </ul>
             </div>
-            <div class="details-unit">
+            <div class="details-unit inner-delay level-2">
               <h5>Software</h5>
               <ul>
                 <li>Powerful machine-learning photo AI</li>
@@ -174,7 +174,7 @@
                 <li>Apps for all major platforms</li>
               </ul>
             </div>
-            <div class="details-unit">
+            <div class="details-unit inner-delay level-3">
               <h5>System</h5>
               <ul>
                 <li>Always-on private cloud</li>
@@ -189,7 +189,7 @@
       </div>
     </section>
     <section class="feature-cards">
-      <div class="layout">
+      <div class="layout scroll-animation">
         <div class="inner grid-max">
           <div class="row">
             <div class="card top-left">
@@ -223,7 +223,7 @@
       </div>
     </section>
     <section class="whats-in-the-box">
-      <div class="layout">
+      <div class="layout scroll-animation">
         <div class="inner grid-max">
           <h1>Whats in the box?</h1>
           <div class="row">
@@ -267,7 +267,7 @@
           </div>
         </div>
       </div>
-      <img src="../assets/img/buy-now/whatsinthebox.jpg"/>
+      <img class="scroll-animation level-1" src="../assets/img/buy-now/whatsinthebox.jpg"/>
     </section>
     {{ footer.el(false) }}
     {% include "./template-parts/_animation-scripts.njk" %}

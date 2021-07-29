@@ -1,10 +1,11 @@
 {% macro el(isHome) %}
-  <section class="offer">
+  <section class="offer scroll-animation">
     {%if isHome%}
-      <img src="/assets/img/offer.png"/> {%else%} <img src="../assets/img/offer.png"/> {% endif%}
+      <img class="inner-delay level-1" src="/assets/img/offer.png"/> {%else%} <img class="inner-delay level-1" src="../assets/img/offer.png"/>
+        {% endif%}
       <div class="layout">
         <div class="inner grid-max">
-          <div class="wrapper">
+          <div class="wrapper inner-delay level-2">
             <h2>Tired of cluttered photo libraries?</h2>
             <h4>Buy your BilderBox now and get an exclusive Early-Bird offer.</h4>
             <a class="button button-large" href="/buy-now">Claim Offer</a>
