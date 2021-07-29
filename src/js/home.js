@@ -89,9 +89,19 @@ document.addEventListener("DOMContentLoaded", function () {
     drawToCanvas(img);
   };
 
+  function resizeListener() {
+    setTimeout(() => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      drawToCanvas(img);
+    }, 200);
+  }
+
   function initAnimation() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+
+    window.addEventListener("resize", resizeListener);
 
     scene.on("progress", (e) => {
       progress = e.progress;
@@ -114,7 +124,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function resetScene() {
     scene.off("update");
-
+    window.removeEventListener("resize", resizeListener);
     clearInterval(animationInterval);
     delay = 1;
   }
