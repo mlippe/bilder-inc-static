@@ -147,6 +147,20 @@
       }
     }
 
+    .floating-content {
+      @include phone-only {
+        .image-container {
+          img {
+            box-shadow: none;
+          }
+
+          &:after {
+            background: linear-gradient(to top, #25262b, rgba(37, 38, 43, 0));
+          }
+        }
+      }
+    }
+
     .gradient-end {
       width: 100%;
       height: 100px;

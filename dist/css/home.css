@@ -50,6 +50,9 @@
 
 @media (min-width: 1000px) { .home section.ecosystem .intro .layout h3 { max-width: 840px; } }
 
+@media (max-width: 599px) { .home section.ecosystem .floating-content .image-container img { box-shadow: none; }
+  .home section.ecosystem .floating-content .image-container:after { background: linear-gradient(to top, #25262b, rgba(37, 38, 43, 0)); } }
+
 .home section.ecosystem .gradient-end { width: 100%; height: 100px; background: linear-gradient(180deg, #25262b, #181413); }
 
 @media (min-width: 600px) { .home section.ecosystem .gradient-end { height: 200px; } }

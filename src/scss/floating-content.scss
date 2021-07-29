@@ -119,6 +119,7 @@
         height: 100%;
         max-height: initial;
         max-width: initial;
+        box-shadow: none;
       }
 
       @include tablet {
