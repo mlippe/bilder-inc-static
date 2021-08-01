@@ -92,7 +92,7 @@
 
 .technology section.hardware .animation-area { width: 100%; position: relative; }
 
-.technology section.hardware .animation-area img { width: 100%; position: absolute; left: 0; z-index: -10; }
+.technology section.hardware .animation-area img { width: 100%; position: absolute; left: 0; z-index: -10; opacity: 0; }
 
 .technology section.hardware .animation-area canvas { width: 100%; position: relative; }
 
@@ -101,6 +101,14 @@
 .technology section.hardware .animation-area .gradient.top { background: linear-gradient(0deg, #18141300, #181413); top: 0; }
 
 .technology section.hardware .animation-area .gradient.bottom { background: linear-gradient(180deg, #18141300, #181413); bottom: 0; }
+
+.technology section.bilderscan .animation-area img, .technology section.bilderbook .animation-area img, .technology section.bilderbeam .animation-area img { max-width: 800px; }
+
+.technology section.bilderscan .animation-area canvas, .technology section.bilderbook .animation-area canvas, .technology section.bilderbeam .animation-area canvas { max-width: 800px; left: 50%; transform: translate(-50%, 0px); }
+
+.technology section.bilderbox .animation-area img { max-width: 1000px; }
+
+.technology section.bilderbox .animation-area canvas { max-width: 1000px; left: 50%; transform: translate(-50%, 0px); }
 
 .technology section.bilderbox h1 em { color: #ffbb1c; }
 

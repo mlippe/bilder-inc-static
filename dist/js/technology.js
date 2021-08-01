@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
       img = new Image();
 
       currentFrame = (index) =>
-        `../assets/book_sequence/bookintro_${index
+        `../assets/book_sequence/bookintrosquare_${index
           .toString()
           .padStart(5, "0")}.jpg`;
 
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
       img = new Image();
 
       currentFrame = (index) =>
-        `../assets/projector_sequence/projectorintro_${index
+        `../assets/projector_sequence/projectorintrosquare_00001_${index
           .toString()
           .padStart(5, "0")}.jpg`;
 
@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
       img = new Image();
 
       currentFrame = (index) =>
-        `../assets/scanner_sequence/scannerintro_${index
+        `../assets/scanner_sequence/scannerintrosquare_${index
           .toString()
           .padStart(5, "0")}.jpg`;
 
@@ -94,15 +94,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 
-  preloadImages();
-
   function drawToCanvas(img) {
     const scale = Math.max(
       canvas.width / img.width,
       canvas.height / img.height
     );
-
-    console.log(scale);
     // get the top left position of the image
     const x = canvas.width / 2 - (img.width / 2) * scale;
     const y = canvas.height / 2 - (img.height / 2) * scale;
@@ -115,6 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   function initAnimation() {
+    preloadImages();
     scene.addTo(controller);
     scene.duration(sizingImg.height);
 

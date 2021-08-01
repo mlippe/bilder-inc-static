@@ -1,8 +1,4 @@
-@font-face { font-family: "Stolzl Regular"; src: url("/asstes/fonts/Stolzl-Regular.woff") format("woff"); }
-
-@font-face { font-family: "Stolzl Medium"; src: url("/asstes/fonts/Stolzl-Medium.woff") format("woff"); }
-
-@font-face { font-family: "Stolzl Bold"; src: url("/asstes/fonts/Stolzl-Bold.woff") format("woff"); }
+@font-face { font-family: "Stolzl Medium"; src: url("/asstes/fonts/Stolzl-Medium.ttf") format("ttf"); }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 

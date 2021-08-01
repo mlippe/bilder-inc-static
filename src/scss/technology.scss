@@ -251,6 +251,7 @@
         position: absolute;
         left: 0;
         z-index: -10;
+        opacity: 0;
       }
 
       canvas {
@@ -279,7 +280,35 @@
     }
   }
 
+  section.bilderscan,
+  section.bilderbook,
+  section.bilderbeam {
+    .animation-area {
+      img {
+        max-width: 800px;
+      }
+
+      canvas {
+        max-width: 800px;
+        left: 50%;
+        transform: translate(-50%, 0px);
+      }
+    }
+  }
+
   section.bilderbox {
+    .animation-area {
+      img {
+        max-width: 1000px;
+      }
+
+      canvas {
+        max-width: 1000px;
+        left: 50%;
+        transform: translate(-50%, 0px);
+      }
+    }
+
     h1 {
       em {
         color: $orange;

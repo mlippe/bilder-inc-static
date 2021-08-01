@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function resetScene() {
-    scene.off("update");
+    scene.off("progress");
     window.removeEventListener("resize", resizeListener);
     clearInterval(animationInterval);
     delay = 1;
