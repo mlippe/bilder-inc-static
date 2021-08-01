@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(scene);
     animationInterval = setInterval(() => {
       delay += (progress - delay) * 0.05;
-      console.log("delay", delay);
+      //console.log("delay", delay);
 
       const frameIndex = Math.min(
         frameCount - 1,
@@ -158,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function () {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         setContent([...entry.target.classList]);
-        console.log(entry);
+        //console.log(entry);
         setTimeout(() => {
           initAnimation();
         }, 50);

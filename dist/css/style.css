@@ -501,10 +501,6 @@ p { font-size: 20px; color: #c6c6c6; line-height: 130%; margin-bottom: 20px; }
 
 .technology section.bilderscan .animation-area canvas, .technology section.bilderbook .animation-area canvas, .technology section.bilderbeam .animation-area canvas { max-width: 800px; left: 50%; transform: translate(-50%, 0px); }
 
-.technology section.bilderbox .animation-area img { max-width: 1000px; }
-
-.technology section.bilderbox .animation-area canvas { max-width: 1000px; left: 50%; transform: translate(-50%, 0px); }
-
 .technology section.bilderbox h1 em { color: #ffbb1c; }
 
 .technology section.bilderbook h1 em { color: #96dc00; }

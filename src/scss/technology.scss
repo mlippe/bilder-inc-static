@@ -297,18 +297,6 @@
   }
 
   section.bilderbox {
-    .animation-area {
-      img {
-        max-width: 1000px;
-      }
-
-      canvas {
-        max-width: 1000px;
-        left: 50%;
-        transform: translate(-50%, 0px);
-      }
-    }
-
     h1 {
       em {
         color: $orange;

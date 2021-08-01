@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     scene.on("progress", (e) => {
       progress = e.progress;
-      console.log("progress", progress);
+      //console.log("progress", progress);
     });
 
     animationInterval = setInterval(() => {
