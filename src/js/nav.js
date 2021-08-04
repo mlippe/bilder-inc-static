@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("scroll", function () {
     debounce(triggerNavbar, 100);
   });
-
+gi
   let lastScrollTop = 0;
   const navbar = document.querySelector(".navbar");
 
