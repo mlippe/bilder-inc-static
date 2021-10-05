@@ -65,6 +65,10 @@
           height: fit-content;
         }
 
+        .swiper-container {
+          overflow: hidden;
+        }
+
         .swiper-button-next,
         .swiper-button-prev {
           bottom: 0;
